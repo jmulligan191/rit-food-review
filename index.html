@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- This template file was made by me in previous courses, I am getting a lot of milage out of it -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- {% compress css %}
+        <link type="text/x-scss" href="{% static 'index.scss' %}" rel="stylesheet" media="screen">
+    {% endcompress %}  -->
+
+    <!-- {% comment %} <link href="{% static 'index.css' %}" rel="stylesheet" type="text/css" /> {% endcomment %} -->
+
+    <link rel='icon' href="logo.png" type='image/x-icon' />
+    <!-- <link rel="stylesheet" href="{% static 'style.css' %}"> {% endcomment %} -->
+    <title>
+        RIT Food Review Homepage
+    </title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-secondary d-flex" aria-label="navbar" id="Navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand p-0 ps-2" href="/"><img src="logo.jpg" style="height: 40px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcontent"
+                aria-controls="navbarcontent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarcontent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div id="content" style="margin-left: 10px; margin-top: 8px;">
+        <!-- Create a basic page containing:
+
+    A paragraph about yourself (what High School you attended and so forth), what are your hobbies etc...
+    A photograph of your favorite food.
+    A link to the RIT SE website.
+    A few bullet points about what you'd like to learn from the course. -->
+
+        <!-- Make sure to use Bootstrap CSS Classes -->
+        <h1>RIT Food Review</h1>
+
+        <h2>About Us</h2>
+        <p>
+            We are a group of students at the Rochester Institute of Technology (RIT) dedicated to providing honest and
+            comprehensive reviews of the various dining options available on campus. Our goal is to help fellow
+            students, faculty, and visitors make informed decisions about where to eat. We cover everything from the
+            quality of food and service to the ambiance and value for money. Whether you're looking for a quick bite
+            between classes or a sit-down meal, we've got you covered!
+        </p>
+
+        <h2>Favorite Food</h2>
+        <img src="https://www.pressurecookrecipes.com/wp-content/uploads/2022/12/instant-pot-mac-and-cheese.jpg"
+            alt="Mac and Cheese (My Favorite Food)" style="width:300px;height:200px;">
+
+    </div>
+
+    <!-- footer -->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-body-secondary">© 2025 Company, Inc</p> <a href="/"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+            aria-label="Bootstrap"> <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+                <use xlink:href="#bootstrap"></use>
+            </svg> </a>
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="https://github.com/SWEN-101-2251-group1/rit-food-review" class="nav-link px-2 text-body-secondary">GitHub</a></li>
+            <!-- -->
+            <!-- <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li> -->
+
+        </ul>
+    </footer>
+
+    <script>
+        let tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (!tz) {
+            tz = "UTC"
+        }
+        document.cookie = "mytz=" + tz + ";path=/";
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
