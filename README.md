@@ -8,3 +8,4 @@ this site aims to help you make informed decisions about where to eat on campus.
 - [Colin He](https://github.com/ColinGHe)
 - [Evan Vaagen](https://github.com/wisoven)
 - [Your Name](https://github.com/yourusername)
+foo
