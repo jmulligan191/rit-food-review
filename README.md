@@ -7,4 +7,4 @@ this site aims to help you make informed decisions about where to eat on campus.
 - [John Mulligan](https://github.com/jmulligan191)
 - [Colin He](https://github.com/ColinGHe)
 - [Evan Vaagen](https://github.com/wisoven)
-- [Your Name](https://github.com/yourusername)
+- [Hansen Rapp](https://github.com/Untitled-dog)
