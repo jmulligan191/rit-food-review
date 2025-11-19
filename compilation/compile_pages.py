@@ -7,19 +7,13 @@ rendered pages directly to the output folder (default `restaurants/`).
 """
 import argparse
 import json
-import re
 from pathlib import Path
-
-def strip_jsonc(text: str) -> str:
-    text = re.sub(r"/\*[\s\S]*?\*/", "", text)
-    text = re.sub(r"//.*?$", "", text, flags=re.MULTILINE)
-    return text
-
+import json5
 
 def load_jsonc(path: Path):
-    content = path.read_text(encoding="utf-8")
-    clean = strip_jsonc(content)
-    return json.loads(clean)
+    """Load a JSONC file (JSON with comments) and return the parsed data."""
+    data = json5.loads(path.read_text(encoding="utf-8"))
+    return data
 
 def choose_image(item: dict, local_key: str, remote_key: str) -> str:
     local = item.get(local_key)
@@ -56,7 +50,11 @@ def main():
         raise SystemExit(1)
 
     # create restaurants folder in src if it doesn't exists already
-    data = load_jsonc(restaurants_src)
+    try:
+        data = load_jsonc(restaurants_src)
+    except json.JSONDecodeError as e:
+        print(f"Error parsing JSONC file {restaurants_src}: {e}")
+        raise SystemExit(1)
     rest_out = outdir / "restaurants"
     rest_out.mkdir(parents=True, exist_ok=True)
 
@@ -71,6 +69,10 @@ def main():
     tpl_text = template_path.read_text(encoding="utf-8")
     env = Environment(autoescape=select_autoescape(["html", "xml"]))
     jtpl = env.from_string(tpl_text)
+
+    if not data or not isinstance(data, dict):
+        print(f"Invalid or no restaurant data found in {restaurants_src}")
+        raise SystemExit(1)
 
     for key, item in data.items():
         slug = item.get("slug") or key
