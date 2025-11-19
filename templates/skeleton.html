@@ -1,0 +1,142 @@
+<!-- 
+This is a template file. My python program "Compiles" all the individual restaurant pages based on the information in here
+and replaces them. All the other pages will be "Compiled" versions of this template with the relevant information filled in.
+This page shouldn't be viewed directly.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- This template file was made by me (John Mulligan) in previous courses, I am getting a lot of milage out of it -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- {% compress css %}
+        <link type="text/x-scss" href="{% static 'index.scss' %}" rel="stylesheet" media="screen">
+    {% endcompress %}  -->
+
+    <link href="styles/index.css" rel="stylesheet" type="text/css" />
+
+    <link rel='icon' href="media/logo.png" type='image/x-icon' />
+    <!-- <link rel="stylesheet" href="{% static 'style.css' %}"> {% endcomment %} -->
+    <title>{{ page_title|default('RIT Food Review') }}</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-secondary d-flex" aria-label="navbar" id="Navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand p-0 ps-2" href="/"><img src="media/logo.png" style="height: 40px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcontent"
+                aria-controls="navbarcontent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarcontent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    {# Banner: either pass `banner_html` or let template pick local/remote banner #}
+    {% if banner_html is defined and banner_html %}
+        {{ banner_html|safe }}
+    {% else %}
+        {% if item.local_banner_path or item.remote_banner_url %}
+            <div class="banner"><img src="{{ item.local_banner_path or item.remote_banner_url }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100"/></div>
+        {% endif %}
+    {% endif %}
+
+    <!-- Content -->
+    <div id="content" style="margin-left: 10px; margin-top: 8px;">
+        <div class="container">
+            <div class="row my-3">
+                <div class="col-md-2">
+                    {# Logo: prefer `logo_url` if provided, else fall back to item paths #}
+                    {% if logo_url is defined and logo_url %}
+                        <img src="{{ logo_url }}" alt="{{ item.name|default('') }} logo" class="img-fluid" />
+                    {% else %}
+                        {% if item.local_logo_path or item.remote_logo_url %}
+                            <img src="{{ item.local_logo_path or item.remote_logo_url }}" alt="{{ item.name|default('') }} logo" class="img-fluid" />
+                        {% endif %}
+                    {% endif %}
+                </div>
+                <div class="col-md-10">
+                    <h1>{{ page_title|default(item.name|default('RIT Food Review')) }}</h1>
+                    <p>{{ item.description|default('No description available.') }}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Hours</h3>
+                    {# Hours table #}
+                    {% if item.hours %}
+                        <table class="table table-sm"><tbody>
+                            {% for day in ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'] %}
+                                <tr><th style="width:30%">{{ day.capitalize() }}</th><td>{{ item.hours.get(day) or 'Closed' }}</td></tr>
+                            {% endfor %}
+                        </tbody></table>
+                    {% else %}
+                        <p>No hours available.</p>
+                    {% endif %}
+                </div>
+                <div class="col-md-6">
+                    <h3>Contact</h3>
+                    {% if item.contact %}
+                        <p><strong>Phone:</strong> {{ item.contact.phone or 'N/A' }}</p>
+                        <p><strong>Email:</strong> {{ item.contact.email or 'N/A' }}</p>
+                    {% else %}
+                        <p>No contact info.</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            {# Extra content placeholder #}
+            {% if extra_content is defined and extra_content %}
+                {{ extra_content|safe }}
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-body-secondary">© 2025 Company, Inc</p> <a href="/"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+            aria-label="Bootstrap"> <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+                <use xlink:href="#bootstrap"></use>
+            </svg> </a>
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="https://github.com/jmulligan191/rit-food-review" class="nav-link px-2 text-body-secondary">GitHub</a></li>
+            <!-- -->
+            <!-- <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li> -->
+
+        </ul>
+    </footer>
+
+    <script>
+        let tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (!tz) {
+            tz = "UTC"
+        }
+        document.cookie = "mytz=" + tz + ";path=/";
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
