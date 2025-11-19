@@ -9,6 +9,7 @@ import argparse
 import json
 from pathlib import Path
 import json5
+from datetime import datetime
 
 def load_jsonc(path: Path):
     """Load a JSONC file (JSON with comments) and return the parsed data."""
@@ -94,6 +95,22 @@ def main():
 
     for key, item in data.items():
         slug = item.get("slug") or key
+        # parse ISO timestamps into datetime objects and expose epoch ms for client-side formatting
+        def _attach_epoch(field: str):
+            val = item.get(field)
+            if isinstance(val, str) and val:
+                try:
+                    dt = datetime.fromisoformat(val)
+                    # store epoch milliseconds for client-side JS formatting
+                    item[f"{field}_epoch_ms"] = int(dt.timestamp() * 1000)
+                    # keep parsed datetime object available (useful for server-side logic/tests)
+                    item[f"{field}_parsed"] = dt
+                except Exception:
+                    # ignore parse errors and leave original value as-is
+                    pass
+
+        _attach_epoch('created_at')
+        _attach_epoch('updated_at')
         filename = rest_out / f"{slug}.html"
         banner_html = build_banner_html(item)
         logo_url = choose_image(item, "local_logo_path", "remote_logo_url") or ""
