@@ -33,8 +33,12 @@
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_gracies.jpg",
         "local_banner_path": "/media/images/restauraunts/gracies_banner.png",
 
-        "created_at": null,
-        "updated_at": null
+        "created_by": "John Mulligan",
+        "edited_by": [
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-23T13:31:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "crossroads": {
@@ -67,8 +71,12 @@
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Crossroads_CROPPED.jpg",
         "local_banner_path": "/media/images/restauraunts/crossroads_banner.png",
 
-        "created_at": null,
-        "updated_at": null
+        "created_by": "John Mulligan",
+        "edited_by": [
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-23T13:31:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "cantina": {
@@ -99,8 +107,12 @@
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Crossroads_CROPPED.jpg",
         "local_banner_path": "/media/images/restauraunts/cantina_banner.png",
 
-        "created_at": null,
-        "updated_at": null
+        "created_by": "John Mulligan",
+        "edited_by": [
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-23T13:31:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "ritz": {
@@ -131,8 +143,12 @@
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Ritz_CROPPED.jpg",
         "local_banner_path": "/media/images/restauraunts/ritz_banner.png",
 
-        "created_at": null,
-        "updated_at": null
+        "created_by": "John Mulligan",
+        "edited_by": [
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-23T13:31:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "brick_city": {
@@ -161,7 +177,14 @@
         "local_logo_path": "/media/images/restauraunts/brick_city_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_BrickCity_CROPPED.jpg",
-        "local_banner_path": "/media/images/restauraunts/brick_city_banner.png"
+        "local_banner_path": "/media/images/restauraunts/brick_city_banner.png",
+
+        "created_by": "John Mulligan",
+        "edited_by": [
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-23T13:31:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "nathans": {
@@ -190,7 +213,14 @@
         "local_logo_path": "/media/images/restauraunts/nathans_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Nathan_0_CROPPED.jpg",
-        "local_banner_path": "/media/images/restauraunts/nathans_banner.png"
+        "local_banner_path": "/media/images/restauraunts/nathans_banner.png",
+
+        "created_by": "John Mulligan",
+        "edited_by": [
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-23T13:31:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "loaded-latke": {
@@ -219,7 +249,15 @@
         "local_logo_path": "/media/images/restauraunts/loaded_latke_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_loadedlatke.jpg",
-        "local_banner_path": "/media/images/restauraunts/loaded_latke_banner.png"
+        "local_banner_path": "/media/images/restauraunts/loaded_latke_banner.png",
+
+        "created_by": "Evan Vaagen",
+        "edited_by": [
+            "Evan Vaagen",
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-31T17:22:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "midnight-oil": {
@@ -248,7 +286,15 @@
         "local_logo_path": "/media/images/restauraunts/midnight_oil_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_midnightoil.jpg",
-        "local_banner_path": "/media/images/restauraunts/midnight_oil_banner.png"
+        "local_banner_path": "/media/images/restauraunts/midnight_oil_banner.png",
+
+        "created_by": "Evan Vaagen",
+        "edited_by": [
+            "Evan Vaagen",
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-31T17:22:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "college-grind": {
@@ -277,7 +323,15 @@
         "local_logo_path": "/media/images/restauraunts/college_grind_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Grind_CROPPED.jpg",
-        "local_banner_path": "/media/images/restauraunts/college_grind_banner.png"
+        "local_banner_path": "/media/images/restauraunts/college_grind_banner.png",
+
+        "created_by": "Evan Vaagen",
+        "edited_by": [
+            "Evan Vaagen",
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-31T17:22:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "ben-and-jerrys": {
@@ -306,7 +360,15 @@
         "local_logo_path": "/media/images/restauraunts/ben_and_jerrys_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/2961_Dining_Ben%26amp%3BJerrys_01.jpg",
-        "local_banner_path": "/media/images/restauraunts/ben_and_jerrys_banner.png"
+        "local_banner_path": "/media/images/restauraunts/ben_and_jerrys_banner.png",
+
+        "created_by": "Evan Vaagen",
+        "edited_by": [
+            "Evan Vaagen",
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-31T17:22:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "commons": {
@@ -335,7 +397,15 @@
         "local_logo_path": "/media/images/restauraunts/commons_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_TheCommons.jpg",
-        "local_banner_path": "/media/images/restauraunts/commons_banner.png"
+        "local_banner_path": "/media/images/restauraunts/commons_banner.png",
+
+        "created_by": "Evan Vaagen",
+        "edited_by": [
+            "Evan Vaagen",
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-31T17:22:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "beanz": {
@@ -364,7 +434,15 @@
         "local_logo_path": "/media/images/restauraunts/beanz_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_beanz.jpg",
-        "local_banner_path": "/media/images/restauraunts/beanz_banner.png"
+        "local_banner_path": "/media/images/restauraunts/beanz_banner.png",
+
+        "created_by": "Evan Vaagen",
+        "edited_by": [
+            "Evan Vaagen",
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-31T17:22:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "artesanos": {
@@ -393,7 +471,15 @@
         "local_logo_path": "/media/images/restauraunts/artesanos_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_artesano.jpg",
-        "local_banner_path": "/media/images/restauraunts/artesanos_banner.png"
+        "local_banner_path": "/media/images/restauraunts/artesanos_banner.png",
+
+        "created_by": "Evan Vaagen",
+        "edited_by": [
+            "Evan Vaagen",
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-31T17:22:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "ctrl-alt-deli": {
@@ -422,7 +508,15 @@
         "local_logo_path": "/media/images/restauraunts/ctrl_alt_deli_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_CtrlAltDeli.jpg",
-        "local_banner_path": "/media/images/restauraunts/ctrl_alt_deli_banner.png"
+        "local_banner_path": "/media/images/restauraunts/ctrl_alt_deli_banner.png",
+
+        "created_by": "Evan Vaagen",
+        "edited_by": [
+            "Evan Vaagen",
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-31T17:22:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "petals": {
@@ -451,7 +545,15 @@
         "local_logo_path": "/media/images/restauraunts/petals_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Petals_CROPPED.jpg",
-        "local_banner_path": "/media/images/restauraunts/petals_banner.png"
+        "local_banner_path": "/media/images/restauraunts/petals_banner.png",
+
+        "created_by": "Evan Vaagen",
+        "edited_by": [
+            "Evan Vaagen",
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-31T17:22:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "javas": {
@@ -480,7 +582,16 @@
         "local_logo_path": "/media/images/restauraunts/javas_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Javas_0_CROPPED.jpg",
-        "local_banner_path": "/media/images/restauraunts/javas_banner.png"
+        "local_banner_path": "/media/images/restauraunts/javas_banner.png",
+
+        "created_by": "Evan Vaagen",
+        "edited_by": [
+            "Evan Vaagen",
+            "John Mulligan"
+        ],
+    
+        "created_at": "2025-10-31T17:22:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     },
 
     "bytes": {
@@ -509,7 +620,15 @@
         "local_logo_path": "/media/images/restauraunts/bytes_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_bytes.jpg",
-        "local_banner_path": "/media/images/restauraunts/bytes_banner.png"
+        "local_banner_path": "/media/images/restauraunts/bytes_banner.png",
+
+        "created_by": "Evan Vaagen",
+        "edited_by": [
+            "Evan Vaagen",
+            "John Mulligan"
+        ],
+        "created_at": "2025-10-31T17:22:00-04:00",
+        "updated_at": "2025-11-19T15:54:00-05:00"
     }
     // there are more places can we add them in
 }
