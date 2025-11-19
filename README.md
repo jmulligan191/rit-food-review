@@ -28,13 +28,14 @@ this site aims to help you make informed decisions about where to eat on campus.
 ```
 
 ## Compilation / Build
-- **Purpose**: A Python script reads the JSONC files and compiles them into final HTML pages using Jinja templates. Generated pages are written into the `src/` folder (for example `src/restaurants/{slug}.html` and `src/index.html`).
+- **Purpose**: A Python script reads the JSONC files and compiles them into final HTML pages using Jinja templates. Generated pages are written into the `docs/` folder (for example `docs/restaurants/{slug}.html` and `docs/index.html`).
+    - The reason I don't use a folder like `src/` is that GitHub Pages serves from `docs/` and won't let you serve it anywhere else but the root. Gracias Github Pages.
 - **Script location**: The compiler is `compilation/compile_pages.py`.
 - **Default inputs/outputs:**
 	- **Restaurants input:** `restaurants.jsonc` (default) — you can pass another file with `--restaurants`.
-	- **Homepage input:** `homepage.jsonc` (default) — optional; if present the script will generate `src/index.html`.
+	- **Homepage input:** `homepage.jsonc` (default) — optional; if present the script will generate `docs/index.html`.
 	- **Template:** `templates/skeleton.html` (default) — can be changed with `--template`.
-	- **Output directory:** `src/` (default) — use `--out` to change.
+	- **Output directory:** `docs/` (default) — use `--out` to change.
 
 # How to run locally
 - **Clone the repository:**
@@ -59,12 +60,12 @@ python3 compilation/compile_pages.py
 ```
 - **Run with explicit files or output directory:**
 ```bash
-python3 compilation/compile_pages.py --restaurants restaurants.jsonc --homepage homepage.jsonc --template templates/skeleton.html --out src
+python3 compilation/compile_pages.py --restaurants restaurants.jsonc --homepage homepage.jsonc --template templates/skeleton.html --out docs
 ```
-- **From there, you should be able to view the generated HTML files in the `src/` directory using a web browser.**
+- **From there, you should be able to view the generated HTML files in the `docs/` directory using a web browser.**
 
 # Notes & tips
-- **Overwriting:** Generated files will overwrite existing files in the `src/` output directory.
+- **Overwriting:** Generated files will overwrite existing files in the `docs/` output directory.
 - **Adding restaurants:** Add new entries to your restaurants JSONC (e.g., `restaurants.jsonc`) following the example structure and re-run the compiler.
 - **Template changes:** Edit `templates/skeleton.html` to change the look of all compiled pages.
 

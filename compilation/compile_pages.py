@@ -40,7 +40,7 @@ def main():
     p.add_argument("--restaurants", default="compilation/static/restaurants.jsonc", help="Path to the restaurants JSONC source file")
     p.add_argument("--homepage", default="compilation/static/homepage.jsonc", help="Path to the homepage JSONC source file (optional)")
     p.add_argument("--template", default="templates/skeleton.html", help="Path to base HTML template")
-    p.add_argument("--out", default="src", help="Output directory for generated pages (default: src)")
+    p.add_argument("--out", default="docs", help="Output directory for generated pages (default: docs)")
     args = p.parse_args()
 
     restaurants_src = Path(args.restaurants)
