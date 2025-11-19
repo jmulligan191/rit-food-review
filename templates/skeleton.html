@@ -1,8 +1,8 @@
-<!-- 
+<!-- <#
 This is a template file. My python program "Compiles" all the individual restaurant pages based on the information in here
 and replaces them. All the other pages will be "Compiled" versions of this template with the relevant information filled in.
 This page shouldn't be viewed directly.
--->
+#> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,18 +12,13 @@ This page shouldn't be viewed directly.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- {% compress css %}
-        <link type="text/x-scss" href="{% static 'index.scss' %}" rel="stylesheet" media="screen">
-    {% endcompress %}  -->
+    <link href="media/styles/index.css" rel="stylesheet" type="text/css" />
 
-    <link href="styles/index.css" rel="stylesheet" type="text/css" />
+    <link rel='icon' href="media/images/logo.png" type='image/x-icon' />
 
-    <link rel='icon' href="media/logo.png" type='image/x-icon' />
-    <!-- <link rel="stylesheet" href="{% static 'style.css' %}"> {% endcomment %} -->
     <title>{{ page_title|default('RIT Food Review') }}</title>
 </head>
 
@@ -31,7 +26,7 @@ This page shouldn't be viewed directly.
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-secondary d-flex" aria-label="navbar" id="Navbar">
         <div class="container-fluid">
-            <a class="navbar-brand p-0 ps-2" href="/"><img src="media/logo.png" style="height: 40px;"></a>
+            <a class="navbar-brand p-0 ps-2" href="/"><img src="media/images/logo.png" style="height: 40px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcontent"
                 aria-controls="navbarcontent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -110,7 +105,7 @@ This page shouldn't be viewed directly.
 
     <!-- footer -->
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-body-secondary">© 2025 Company, Inc</p> <a href="/"
+        <p class="col-md-4 mb-0 text-body-secondary">© 2025 John Mulligan and SWEN-101-02 2251 Group 1</p> <a href="/"
             class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
             aria-label="Bootstrap"> <svg class="bi me-2" width="40" height="32" aria-hidden="true">
                 <use xlink:href="#bootstrap"></use>
