@@ -3,6 +3,13 @@
 # This .gitignore is appropriate for repositories deployed to GitHub Pages and using
 # a Gemfile as specified at https://github.com/github/pages-gem#conventional
 
+# Specific ignore for GitHub Pages
+# GitHub Pages will always use its own deployed version of pages-gem
+# This means GitHub Pages will NOT use your Gemfile.lock and therefore it is
+# counterproductive to check this file into the repository.
+# Details at https://github.com/github/pages-gem/issues/768
+Gemfile.lock
+
 # Basic Jekyll gitignores (synchronize to Jekyll.gitignore)
 _site/
 .sass-cache/
@@ -12,15 +19,20 @@ _site/
 # Additional Ruby/bundler ignore for when you run: bundle install
 /vendor
 
-# Ignore node_modules
-node_modules/
+# Below here are common ignores for this site specifically
 
-# Specific ignore for GitHub Pages
-# GitHub Pages will always use its own deployed version of pages-gem
-# This means GitHub Pages will NOT use your Gemfile.lock and therefore it is
-# counterproductive to check this file into the repository.
-# Details at https://github.com/github/pages-gem/issues/768
-Gemfile.lock
+# Ignore python virtual environment folders
+venv/
+.venv/
+env/
+.env/
+
+# ignore testing python files i'm messing with
+_*.py 
+
+
+# Ignore node_modules (JS stuff)
+node_modules/
 
 # Ignore Mac system files
 .DS_Store
