@@ -1,0 +1,21 @@
+{
+    "title": "RIT Food Review Homepage",
+    "name": "RIT Food Review",
+
+    "description": "We are a group of students at the Rochester Institute of Technology (RIT) dedicated to providing honest and comprehensive reviews of the various dining options available on campus. Our goal is to help fellow students, faculty, and visitors make informed decisions about where to eat. We cover everything from the quality of food and service to the ambiance and value for money. Whether you're looking for a quick bite between classes or a sit-down meal, we've got you covered!",
+
+    "favorite_food": {
+        "name": "Mac and Cheese",
+        "image_url": "https://www.pressurecookrecipes.com/wp-content/uploads/2022/12/instant-pot-mac-and-cheese.jpg",
+        "alt": "Mac and Cheese (My Favorite Food)",
+        "width": 300,
+        "height": 200
+    },
+
+    "links": [
+        { "text": "GitHub", "url": "https://github.com/jmulligan191/rit-food-review" }
+    ],
+
+    // Extra HTML content (optional). Null means none.
+    "extra_content": null
+}

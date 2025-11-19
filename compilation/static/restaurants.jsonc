@@ -1,0 +1,515 @@
+/* This JSON file contains information about various restaurants on the RIT campus.
+   Each restaurant is represented as an object with details such as name, description, hours, contact info, and media URLs.
+   This file is used to generate web pages for each restaurant using a templating system I wrote in python. Source code is in compile_pages.py.
+   Be careful when editing this file to maintain proper JSON syntax and relevant information.
+*/
+
+{
+    "gracies": {
+        "slug": "gracies",
+        "name": "Gracies",
+        "description": "RIT's largest dining hall, Gracie's offers an all-you-care-to-eat buffet with rotating international dishes, brick-oven pizza, and allergen-friendly stations. It's nut-free (except coconut) and caters to vegan and gluten-free diets.",
+
+        "hours": {
+            "monday": "7:00AM-7:30PM",
+            "tuesday": "7:00AM-7:30PM",
+            "wednesday": "7:00AM-7:30PM",
+            "thursday": "7:00AM-7:30PM",
+            "friday": "7:00AM-7:30PM",
+            "saturday": "8:00AM-7:00PM",
+            "sunday": "11:00AM-7:00PM"
+        },
+
+        "contact": {
+            "phone": "(585) 475-2411",
+            "email": null
+            //"address": "Gracie's, 1 Lomb Memorial Dr, Rochester, NY 14623",
+            //"website": "https://www.rit.edu/dining/gracies-dining-hall",
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Gracies_170x170_black.png",
+        "local_logo_path": "media/images/gracies_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_gracies.jpg",
+        "local_banner_path": "media/images/gracies_banner.png",
+
+        "created_at": null,
+        "updated_at": null
+    },
+
+    "crossroads": {
+        "slug": "crossroads",
+        "website_slug": "cafe-and-market-crossroads",
+
+        "name": "Crossroads",
+        "description": "A market-style food court in Global Village with stations for sushi, pizza, subs, Asian cuisine, and daily chef specials. It's a popular lunch and dinner spot with grab-and-go options.",
+
+        "hours": {
+            "monday": "10:30AM-8:00PM",
+            "tuesday": "10:30AM-9:00PM",
+            "wednesday": "10:30AM-9:00PM",
+            "thursday": "10:30AM-9:00PM",
+            "friday": "10:30AM-6:00PM",
+            "saturday": null,
+            "sunday": "12:00PM-8:00PM"
+        },
+
+        "contact": {
+            "phone": "(585) 475-2000",
+            "email": null
+            //"address": "Crossroads, 1 Lomb Memorial Dr, Rochester, NY 14623",
+            //"website": "https://www.rit.edu/dining/crossroads",
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Crossroads_170x170_black.png",
+        "local_logo_path": "media/images/crossroads_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Crossroads_CROPPED.jpg",
+        "local_banner_path": "media/images/crossroads_banner.png",
+
+        "created_at": null,
+        "updated_at": null
+    },
+
+    "cantina": {
+        "slug": "cantina",
+        "website_slug": "patio-global-village",
+
+        "name": "Cantina Patio & Grill",
+        "description": "Located in Global Village, Cantina serves made-to-order Mexican fare like tacos and burritos, plus rotating international options from Mediterranean to Indian. It’s a flavorful, fast-casual experience.",
+
+        "hours": {
+            "monday": "11:00AM-9:00PM",
+            "tuesday": "11:00AM-9:00PM",
+            "wednesday": "11:00AM-9:00PM",
+            "thursday": "11:00AM-9:00PM",
+            "friday": "11:00AM-8:00PM",
+            "saturday": "12:00PM-8:00PM",
+            "sunday": null
+        },
+
+        "contact": {
+            "phone": "(585) 475-3453",
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Cantina_170x170_black.png",
+        "local_logo_path": "media/images/cantina_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Crossroads_CROPPED.jpg",
+        "local_banner_path": "media/images/cantina_banner.png",
+
+        "created_at": null,
+        "updated_at": null
+    },
+
+    "ritz": {
+        "slug": "ritz",
+        "website_slug": "ritz",
+        
+        "name": "The Ritz",
+        "description": "A spirited campus eatery known for its paninis, pasta bakes, and signature Munson sandwich. RITZ is a go-to for subs, pizza, and grab-and-go meals with a side of Tiger pride.",
+
+        "hours": {
+            "monday": "10:00AM-6:00PM",
+            "tuesday": "10:00AM-6:00PM",
+            "wednesday": "10:00AM-6:00PM",
+            "thursday": "10:00AM-6:00PM",
+            "friday": "10:00AM-6:00PM",
+            "saturday": null,
+            "sunday": null
+        },
+
+        "contact": {
+            "phone": null,
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2025-06/RITZ_LogoBlack.png",
+        "local_logo_path": "media/images/ritz_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Ritz_CROPPED.jpg",
+        "local_banner_path": "media/images/ritz_banner.png",
+
+        "created_at": null,
+        "updated_at": null
+    },
+
+    "brick_city": {
+        "slug": "brick_city",
+        "website_slug": "kitchen-brick-city",
+
+        "name": "Brick City Cafe",
+        "description": "A breakfast and lunch café offering build-your-own sandwiches, salads, and vegan grill specials. Known for its coffee and quick service, it’s a favorite for early risers and midday bites.",
+
+        "hours": {
+            "monday": "7:00AM-2:00PM",
+            "tuesday": "7:00AM-2:00PM",
+            "wednesday": "7:00AM-2:00PM",
+            "thursday": "7:00AM-2:00PM",
+            "friday": "7:00AM-2:00PM",
+            "saturday": null,
+            "sunday": null
+        },
+
+        "contact": {
+            "phone": "(585) 475-2869",
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_BrickCity_170x170_black.png",
+        "local_logo_path": "media/images/brick_city_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_BrickCity_CROPPED.jpg",
+        "local_banner_path": "media/images/brick_city_banner.png"
+    },
+
+    "nathans": {
+        "slug": "nathans",
+        "website_slug": "nathans-soup-salad",
+
+        "name": "Nathan's Soup and Salads",
+        "description": "A local favorite since 1980, Nathan's serves hearty soups, fresh sandwiches, and baked breads. Founded by an RIT alum, it's a comforting, home-style option with a loyal following.",
+
+        "hours": {
+            "monday": "10:00AM-6:00PM",
+            "tuesday": "10:00AM-6:00PM",
+            "wednesday": "10:00AM-6:00PM",
+            "thursday": "10:00AM-6:00PM",
+            "friday": "10:00AM-5:00PM",
+            "saturday": "11:00AM-2:00PM",
+            "sunday": null
+        },
+
+        "contact": {
+            "phone": "(585) 424-4551",
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Nathans_170x170_black.png",
+        "local_logo_path": "media/images/nathans_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Nathan_0_CROPPED.jpg",
+        "local_banner_path": "media/images/nathans_banner.png"
+    },
+
+    "loaded-latke": {
+        "slug": "loaded-latke",
+        "website_slug": "loaded-latke",
+
+        "name": "Loaded Latke",
+        "description": "We are a certified Kosher deli under the supervision of STAR-K Kosher Certification. We serve traditional hand-crafted sandwiches with premium meats, house-made bagel chips, matzo ball soup, potato salad, latkes, pickles, and Dr. Brown's beverages.",
+
+        "hours": {
+            "monday": "11:00AM-2:00PM",
+            "tuesday": "11:00AM-2:00PM",
+            "wednesday": "11:00AM-2:00PM",
+            "thursday": "11:00AM-2:00PM",
+            "friday": null,
+            "saturday": null,
+            "sunday": null
+        },
+
+        "contact": {
+            "phone": "(585) 475-5000",
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Loaded%20Latke_170x170_black.png",
+        "local_logo_path": "media/images/loaded_latke_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_loadedlatke.jpg",
+        "local_banner_path": "media/images/loaded_latke_banner.png"
+    },
+
+    "midnight-oil": {
+        "slug": "midnight-oil",
+        "website_slug": "midnight-oil",
+
+        "name": "Midnight Oil",
+        "description": "We serve Starbucks® coffee and nestled in Global Village. We serve coffee, specialty drinks, artisan sandwiches, desserts, and pastries. We feature student-crafted beverages throughout the semester.",
+
+        "hours": {
+            "monday": "7:30AM-11:00PM",
+            "tuesday": "7:30AM-11:00PM",
+            "wednesday": "7:30AM-11:00PM",
+            "thursday": "7:30AM-11:00PM",
+            "friday": "7:30AM-11:00PM",
+            "saturday": "10:00AM-10:00PM",
+            "sunday": "10:00AM-10:00PM"
+        },
+
+        "contact": {
+            "phone": "(585) 475-3645",
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Midnight%20Oil_170x170_black.png",
+        "local_logo_path": "media/images/midnight_oil_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_midnightoil.jpg",
+        "local_banner_path": "media/images/midnight_oil_banner.png"
+    },
+
+    "college-grind": {
+        "slug": "college-grind",
+        "website_slug": "college-grind",
+
+        "name": "The College Grind",
+        "description": "We offer hot and cold Starbucks® beverages, pastries, breakfast sandwiches, and desserts near NTID. Stop by for smoothies made from whole fruits and vegetables and cold-pressed juices from Red Jacket Orchards, a local orchard. Orders are placed from a kiosk.",
+
+        "hours": {
+            "monday": "7:30AM-4:00PM",
+            "tuesday": "7:30AM-4:00PM",
+            "wednesday": "7:30AM-4:00PM",
+            "thursday": "7:30AM-4:00PM",
+            "friday": "7:30AM-4:00PM",
+            "saturday": "9:00AM-2:00PM",
+            "sunday": "9:00AM-2:00PM"
+        },
+
+        "contact": {
+            "phone": "(585) 475-6440",
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_College%20Grind_170x170_black.png",
+        "local_logo_path": "media/images/college_grind_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Grind_CROPPED.jpg",
+        "local_banner_path": "media/images/college_grind_banner.png"
+    },
+
+    "ben-and-jerrys": {
+        "slug": "ben-and-jerrys",
+        "website_slug": "ben-and-jerrys",
+
+        "name": "Ben & Jerry's",
+        "description": "We offer over 20 flavors of Vermont's best ice cream. In 1978, Ben & Jerry's first served ice cream in downtown Burlington, VT. Friends hung out at the scoop shop, and good vibes flowed over euphoric flavors. This still holds true right in the heart of the RIT campus. We serve dairy and non-dairy ice creams, sorbet, slushies, shakes, sundaes, and cookies.",
+
+        "hours": {
+            "monday": "12:00PM-7:00PM",
+            "tuesday": "12:00PM-7:00PM",
+            "wednesday": "12:00PM-7:00PM",
+            "thursday": "12:00PM-7:00PM",
+            "friday": "12:00PM-7:00PM",
+            "saturday": null,
+            "sunday": null
+        },
+
+        "contact": {
+            "phone": null,
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Ben_and_Jerrys_170x170_black.png",
+        "local_logo_path": "media/images/ben_and_jerrys_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/2961_Dining_Ben%26amp%3BJerrys_01.jpg",
+        "local_banner_path": "media/images/ben_and_jerrys_banner.png"
+    },
+
+    "commons": {
+        "slug": "commons",
+        "website_slug": "commons",
+
+        "name": "The Commons",
+        "description": "From lunch on the go to late-night bites, Commons makes it easy to get what you’re craving. Order through the kiosks or online and enjoy classics like hot pizzas, fresh salads, deli subs, and gourmet sandwiches—ready when you are.",
+
+        "hours": {
+            "monday": "2:00PM-11:00PM",
+            "tuesday": "2:00PM-11:00PM",
+            "wednesday": "2:00PM-11:00PM",
+            "thursday": "2:00PM-11:00PM",
+            "friday": "2:00PM-11:00PM",
+            "saturday": "2:00PM-10:00PM",
+            "sunday": "2:00PM-10:00PM"
+        },
+
+        "contact": {
+            "phone": "(585) 475-6440",
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Commons_170x170_black.png",
+        "local_logo_path": "media/images/commons_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_TheCommons.jpg",
+        "local_banner_path": "media/images/commons_banner.png"
+    },
+
+    "beanz": {
+        "slug": "beanz",
+        "website_slug": "beanz",
+
+        "name": "Beanz",
+        "description": "We serve local Finger Lakes Coffee Roasters®  drinks, milkshakes, and seasonal specialty drinks, along with freshly baked goods, desserts, sandwiches, and smoothies blended with whole fruits, vegetables, and cold-pressed apple juice from a local orchard, Red Jacket Orchards. We also serve our own Tiger Blend coffee using fair trade Bolivian dark roast coffee.",
+
+        "hours": {
+            "monday": "7:30AM-10:00PM",
+            "tuesday": "7:30AM-10:00PM",
+            "wednesday": "7:30AM-10:00PM",
+            "thursday": "7:30AM-10:00PM",
+            "friday": "7:30AM-10:00PM",
+            "saturday": "9:00AM-10:00PM",
+            "sunday": "9:00AM-10:00PM"
+        },
+
+        "contact": {
+            "phone": "(585) 475-2411",
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Beanz_170x170_black.png",
+        "local_logo_path": "media/images/beanz_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_beanz.jpg",
+        "local_banner_path": "media/images/beanz_banner.png"
+    },
+
+    "artesanos": {
+        "slug": "artesanos",
+        "website_slug": "artesano-bakery-cafe",
+
+        "name": "Artesano Bakery & Café",
+        "description": "We are a patisserie offering a wide selection of upscale delicacies, including in-house created desserts, breakfast pastries, sandwiches, cookies, tarts, and gluten-free and vegan options. We serve blended frozen drinks, espressos, lattes, and cappuccinos from Peet's Coffee®.",
+
+        "hours": {
+            "monday": "7:30AM-7:00PM",
+            "tuesday": "7:30AM-7:00PM",
+            "wednesday": "7:30AM-7:00PM",
+            "thursday": "7:30AM-7:00PM",
+            "friday": "7:30AM-7:00PM",
+            "saturday": null,
+            "sunday": "9:00AM-3:00PM"
+        },
+
+        "contact": {
+            "phone": "(585) 475-3111",
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Artesano_170x170_black.png",
+        "local_logo_path": "media/images/artesanos_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_artesano.jpg",
+        "local_banner_path": "media/images/artesanos_banner.png"
+    },
+
+    "ctrl-alt-deli": {
+        "slug": "ctrl-alt-deli",
+        "website_slug": "ctrl-alt-deli",
+
+        "name": "Ctrl Alt DELi",
+        "description": "Take control and design your hot or cold sandwich, pizza, panini, or wrap. We offer breakfast sandwiches and grab-and-go options, including bagels, baked goods, pastries, fresh fruit, and salads.",
+
+        "hours": {
+            "monday": "7:30AM-5:00PM",
+            "tuesday": "7:30AM-5:00PM",
+            "wednesday": "7:30AM-5:00PM",
+            "thursday": "7:30AM-5:00PM",
+            "friday": "7:30AM-2:00PM",
+            "saturday": null,
+            "sunday": null
+        },
+
+        "contact": {
+            "phone": "(585) 475-2998",
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_CtrlAltDeli_170x170_black.png",
+        "local_logo_path": "media/images/ctrl_alt_deli_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_CtrlAltDeli.jpg",
+        "local_banner_path": "media/images/ctrl_alt_deli_banner.png"
+    },
+
+    "petals": {
+        "slug": "petals",
+        "website_slug": "petals-restaurant",
+
+        "name": "Petals Restaurant",
+        "description": "We offer traditional American fare with daily breakfast, lunch, and dinner specials. We are located inside the RIT Inn and Conference Center.",
+
+        "hours": {
+            "monday": "6:30AM-10:30PM",
+            "tuesday": "6:30AM-10:30PM",
+            "wednesday": "6:30AM-10:30PM",
+            "thursday": "6:30AM-10:30PM",
+            "friday": "6:30AM-10:30PM",
+            "saturday": "7:00AM-10:30PM",
+            "sunday": "7:00AM-10:30PM"
+        },
+
+        "contact": {
+            "phone": "(585) 359-1800",
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Petals_170x170_black.png",
+        "local_logo_path": "media/images/petals_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Petals_CROPPED.jpg",
+        "local_banner_path": "media/images/petals_banner.png"
+    },
+
+    "javas": {
+        "slug": "javas",
+        "website_slug": "javas",
+
+        "name": "Java's",
+        "description": "We serve fresh, locally roasted coffee, organic teas, light snacks, and gluten-free and vegan options in a casual and comfortable atmosphere. We have a partnership with Java's on Gibbs Street in downtown Rochester.",
+
+        "hours": {
+            "monday": "7:30AM-7:00PM",
+            "tuesday": "7:30AM-7:00PM",
+            "wednesday": "7:30AM-7:00PM",
+            "thursday": "7:30AM-7:00PM",
+            "friday": "7:30AM-7:00PM",
+            "saturday": "9:00AM-3:00PM",
+            "sunday": null
+        },
+
+        "contact": {
+            "phone": "(585) 475-4770",
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Javas_170x170_black.png",
+        "local_logo_path": "media/images/javas_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Javas_0_CROPPED.jpg",
+        "local_banner_path": "media/images/javas_banner.png"
+    },
+
+    "bytes": {
+        "slug": "bytes",
+        "website_slug": "bytes",
+
+        "name": "Bytes",
+        "description": "We are a 24-hour self-service and self-checkout micromarket that offers a variety of food options, including beverages, signature sandwiches, salads, snacks, and microwavable entrées. We have multiple locations around campus. We partner with AVI, Foodsystems to bring an inviting atmosphere with endless choices, convenient shopping, and secure technology.",
+
+        "hours": {
+            "monday": "12:00AM-11:59PM",
+            "tuesday": "12:00AM-11:59PM",
+            "wednesday": "12:00AM-11:59PM",
+            "thursday": "12:00AM-11:59PM",
+            "friday": "12:00AM-11:59PM",
+            "saturday": "12:00AM-11:59PM",
+            "sunday": "12:00AM-11:59PM"
+        },
+
+        "contact": {
+            "phone": null,
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Bytes_170x170_black.png",
+        "local_logo_path": "media/images/bytes_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_bytes.jpg",
+        "local_banner_path": "media/images/bytes_banner.png"
+    }
+    // there are more places can we add them in
+}

@@ -1,0 +1,1 @@
+put all the static json data files here (e.g., restaurant details, reviews, etc.)
