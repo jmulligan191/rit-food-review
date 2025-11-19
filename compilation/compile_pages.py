@@ -61,14 +61,32 @@ def main():
     # create specific restaurant pages, collect summary for index
     cards = []
     try:
-        from jinja2 import Environment, select_autoescape
+        from jinja2 import Environment, select_autoescape, FileSystemLoader
     except Exception:
         print("jinja2 is required. Install with: pip install jinja2")
         raise SystemExit(1)
 
-    tpl_text = template_path.read_text(encoding="utf-8")
-    env = Environment(autoescape=select_autoescape(["html", "xml"]))
-    jtpl = env.from_string(tpl_text)
+    # future proofing this so we can have more templates later
+    templates = {
+        "skeleton": template_path.name,
+        "restaurant": (template_path.parent / 'skeleton-resturaunts.html').name,
+    }
+
+    # Create a Jinja environment with a FileSystemLoader pointed at the templates folder
+    env = Environment(loader=FileSystemLoader(str(template_path.parent)), autoescape=select_autoescape(["html", "xml"]))
+
+    templates_jinja = {}
+    for key, name in templates.items():
+        try:
+            templates_jinja[key] = env.get_template(name)
+        except Exception:
+            templates_jinja[key] = None
+    
+    # for convienence i'll just set them to variables cause the dict syntax every time we want a template is annoying
+    skeleton = templates_jinja["skeleton"]
+    skeleton_restaurant = templates_jinja["restaurant"]
+    
+
 
     if not data or not isinstance(data, dict):
         print(f"Invalid or no restaurant data found in {restaurants_src}")
@@ -79,7 +97,8 @@ def main():
         filename = rest_out / f"{slug}.html"
         banner_html = build_banner_html(item)
         logo_url = choose_image(item, "local_logo_path", "remote_logo_url") or ""
-        rendered = jtpl.render(item=item, page_title=item.get("name"), banner_html=banner_html, logo_url=logo_url, extra_content="")
+        # use restaurant template for individual pages
+        rendered = skeleton_restaurant.render(item=item, page_title=item.get("name"), banner_html=banner_html, logo_url=logo_url, extra_content="")
         filename.write_text(rendered, encoding="utf-8")
         print(f"Wrote {filename}")
 
@@ -102,18 +121,27 @@ def main():
     index_extra = '<div class="container"><div class="row">' + '\n'.join(cards_html) + '</div></div>'
 
     # render index page using template
-    index_rendered = jtpl.render(item={"name":"Restaurants Index","description":"All restaurants"}, page_title="Restaurants", banner_html="", logo_url="", extra_content=index_extra)
+    index_rendered = skeleton.render(item={"name":"Restaurants Index","description":"All restaurants"}, page_title="Restaurants", banner_html="", logo_url="", extra_content=index_extra)
     index_file = rest_out / "index.html"
     index_file.write_text(index_rendered, encoding="utf-8")
     print(f"Wrote {index_file}")
 
     # Do homepage if provided
     if homepage_src.exists():
-        homepage = load_jsonc(homepage_src)
+        try:
+            homepage = load_jsonc(homepage_src)
+        except json.JSONDecodeError as e:
+            print(f"Error parsing JSONC file {homepage_src}: {e}")
+            raise SystemExit(1)
+        
+        if not isinstance(homepage, dict):
+            print(f"Invalid homepage data in {homepage_src}")
+            raise SystemExit(1)
+
         # render homepage into outdir/index.html
         homepage_banner = build_banner_html(homepage)
         homepage_logo = choose_image(homepage, "local_logo_path", "remote_logo_url") or ""
-        homepage_rendered = jtpl.render(item=homepage, page_title=homepage.get("title") or homepage.get("name"), banner_html=homepage_banner, logo_url=homepage_logo, extra_content=homepage.get("extra_content",""))
+        homepage_rendered = skeleton.render(item=homepage, page_title=homepage.get("title") or homepage.get("name"), banner_html=homepage_banner, logo_url=homepage_logo, extra_content=homepage.get("extra_content",""))
         homepage_file = outdir / "index.html"
         homepage_file.write_text(homepage_rendered, encoding="utf-8")
         print(f"Wrote {homepage_file}")
