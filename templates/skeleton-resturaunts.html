@@ -62,8 +62,18 @@
                 </div>
                 <div class="col-md-4">
                     <h4>Meta</h4>
-                    {% if item.created_at %}<p><strong>Created:</strong> {{ item.created_at }}</p>{% endif %}
-                    {% if item.updated_at %}<p><strong>Updated:</strong> {{ item.updated_at }}</p>{% endif %}
+                    {% if item.created_at %}
+                        <p><strong>Created:</strong> <time class="js-local-time" datetime="{{ item.created_at }}" data-epoch="{{ item.created_at_epoch_ms|default('') }}">{{ item.created_at }}</time></p>
+                    {% endif %}
+                    {% if item.updated_at %}
+                        <p><strong>Updated:</strong> <time class="js-local-time" datetime="{{ item.updated_at }}" data-epoch="{{ item.updated_at_epoch_ms|default('') }}">{{ item.updated_at }}</time></p>
+                    {% endif %}
+                    {% if item.created_by %}
+                        <p><strong>Created by:</strong> {{ item.created_by }}</p>
+                    {% endif %}
+                    {% if item.edited_by %}
+                        <p><strong>Edited by:</strong> {{ item.edited_by | join(', ') }}</p>
+                    {% endif %}
                 </div>
             </div>
 
