@@ -1,0 +1,84 @@
+{% extends 'skeleton.html' %}
+
+{# Restaurant-specific template: extends the base skeleton and provides additional fields #}
+
+{% block title %}{{ item.name|default('Restaurant') }} - {{ super() }}{% endblock %}
+
+{% block banner %}
+    {# Prefer banner_html if provided, otherwise use item banner (inherited logic) #}
+    {% if banner_html is defined and banner_html %}
+        {{ banner_html|safe }}
+    {% else %}
+        {% if item.local_banner_path or item.remote_banner_url %}
+            <div class="banner"><img src="{{ item.local_banner_path or item.remote_banner_url }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100"/></div>
+        {% endif %}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div id="content" style="margin-left: 10px; margin-top: 8px;">
+        <div class="container">
+            <div class="row my-3">
+                <div class="col-md-3">
+                    {% if logo_url %}
+                        <img src="{{ logo_url }}" alt="{{ item.name }} logo" class="img-fluid" />
+                    {% elif item.local_logo_path or item.remote_logo_url %}
+                        <img src="{{ item.local_logo_path or item.remote_logo_url }}" alt="{{ item.name }} logo" class="img-fluid" />
+                    {% endif %}
+                </div>
+                <div class="col-md-9">
+                    <h1>{{ item.name|default('Unnamed Restaurant') }}</h1>
+                    <p>{{ item.description|default('No description available.') }}</p>
+                    {% if item.website_slug or item.website %}
+                        <p><a href="{{ item.website or ('https://www.rit.edu/dining/' + (item.website_slug or '')) }}" target="_blank">Visit official page</a></p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Hours</h4>
+                    {% if item.hours %}
+                        <table class="table table-sm"><tbody>
+                            {% for day in ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'] %}
+                                <tr><th style="width:35%">{{ day.capitalize() }}</th><td>{{ item.hours.get(day) or 'Closed' }}</td></tr>
+                            {% endfor %}
+                        </tbody></table>
+                    {% else %}
+                        <p>No hours available.</p>
+                    {% endif %}
+                </div>
+                <div class="col-md-4">
+                    <h4>Contact</h4>
+                    {% if item.contact %}
+                        <p><strong>Phone:</strong> {{ item.contact.phone or 'N/A' }}</p>
+                        <p><strong>Email:</strong> {{ item.contact.email or 'N/A' }}</p>
+                    {% else %}
+                        <p>No contact info.</p>
+                    {% endif %}
+                    {% if item.address %}
+                        <p><strong>Address:</strong> {{ item.address }}</p>
+                    {% endif %}
+                </div>
+                <div class="col-md-4">
+                    <h4>Meta</h4>
+                    {% if item.created_at %}<p><strong>Created:</strong> {{ item.created_at }}</p>{% endif %}
+                    {% if item.updated_at %}<p><strong>Updated:</strong> {{ item.updated_at }}</p>{% endif %}
+                </div>
+            </div>
+
+            {% if item.menu %}
+                <div class="row my-3">
+                    <div class="col-12">
+                        <h4>Menu</h4>
+                        {{ item.menu|safe }}
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if extra_content is defined and extra_content %}
+                {{ extra_content|safe }}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

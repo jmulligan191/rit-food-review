@@ -19,7 +19,7 @@ This page shouldn't be viewed directly.
 
     <link rel='icon' href="media/images/logo.png" type='image/x-icon' />
 
-    <title>{{ page_title|default('RIT Food Review') }}</title>
+    <title>{% block title %}{{ page_title|default('RIT Food Review') }}{% endblock %}</title>
 </head>
 
 <body>
@@ -42,6 +42,7 @@ This page shouldn't be viewed directly.
     </nav>
 
     <!-- Banner -->
+    {% block banner %}
     {# Banner: either pass `banner_html` or let template pick local/remote banner #}
     {% if banner_html is defined and banner_html %}
         {{ banner_html|safe }}
@@ -50,58 +51,26 @@ This page shouldn't be viewed directly.
             <div class="banner"><img src="{{ item.local_banner_path or item.remote_banner_url }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100"/></div>
         {% endif %}
     {% endif %}
+    {% endblock %}
 
     <!-- Content -->
+    {% block content %}
     <div id="content" style="margin-left: 10px; margin-top: 8px;">
         <div class="container">
             <div class="row my-3">
-                <div class="col-md-2">
-                    {# Logo: prefer `logo_url` if provided, else fall back to item paths #}
-                    {% if logo_url is defined and logo_url %}
-                        <img src="{{ logo_url }}" alt="{{ item.name|default('') }} logo" class="img-fluid" />
-                    {% else %}
-                        {% if item.local_logo_path or item.remote_logo_url %}
-                            <img src="{{ item.local_logo_path or item.remote_logo_url }}" alt="{{ item.name|default('') }} logo" class="img-fluid" />
-                        {% endif %}
-                    {% endif %}
-                </div>
-                <div class="col-md-10">
+                <div class="col-12">
                     <h1>{{ page_title|default(item.name|default('RIT Food Review')) }}</h1>
                     <p>{{ item.description|default('No description available.') }}</p>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Hours</h3>
-                    {# Hours table #}
-                    {% if item.hours %}
-                        <table class="table table-sm"><tbody>
-                            {% for day in ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'] %}
-                                <tr><th style="width:30%">{{ day.capitalize() }}</th><td>{{ item.hours.get(day) or 'Closed' }}</td></tr>
-                            {% endfor %}
-                        </tbody></table>
-                    {% else %}
-                        <p>No hours available.</p>
-                    {% endif %}
-                </div>
-                <div class="col-md-6">
-                    <h3>Contact</h3>
-                    {% if item.contact %}
-                        <p><strong>Phone:</strong> {{ item.contact.phone or 'N/A' }}</p>
-                        <p><strong>Email:</strong> {{ item.contact.email or 'N/A' }}</p>
-                    {% else %}
-                        <p>No contact info.</p>
-                    {% endif %}
-                </div>
-            </div>
-
-            {# Extra content placeholder #}
+            {# Pages may provide arbitrary extra HTML via `extra_content` #}
             {% if extra_content is defined and extra_content %}
-                {{ extra_content|safe }}
+                <div class="row"><div class="col-12">{{ extra_content|safe }}</div></div>
             {% endif %}
         </div>
     </div>
+    {% endblock %}
 
     <!-- footer -->
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
