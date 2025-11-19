@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["compilation"]
+
+[project]
+name = "rit-food-review"
+version = "1.0.0"
+description = ""
+requires-python = ">=3.8"
+dependencies = [
+  "jinja2>=3.0",
+  "json5>=0.9.6"
+]
+[project.optional-dependencies]
+# Optional groups (extras) to install additional tooling.
+# - `testing`: unit test tooling
+# - `network`: optional network helpers used by test scripts
+# - `dev`: convenience group for development (tests + network)
+testing = [
+  "pytest>=9.0"
+]
+network = [
+  "requests>=2.26"
+]
+dev = [
+  "pytest>=9.0",
+  "requests>=2.26"
+]
