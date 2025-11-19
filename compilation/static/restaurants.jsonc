@@ -101,7 +101,7 @@
             "email": null
         },
 
-        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Cantina_170x170_black.png",
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Cantina%20and%20Grille_170x170_black.png",
         "local_logo_path": "/media/images/restauraunts/cantina_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Crossroads_CROPPED.jpg",
@@ -173,10 +173,10 @@
             "email": null
         },
 
-        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_BrickCity_170x170_black.png",
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Brick%20City_170x170_black.png",
         "local_logo_path": "/media/images/restauraunts/brick_city_logo.png", // slug
 
-        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_BrickCity_CROPPED.jpg",
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_BCC_CROPPED.jpg",
         "local_banner_path": "/media/images/restauraunts/brick_city_banner.png",
 
         "created_by": "John Mulligan",
