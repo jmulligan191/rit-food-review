@@ -14,6 +14,10 @@ this site aims to help you make informed decisions about where to eat on campus.
 ## Data Source
 - **Location**: The compilation inputs are JSON/JSONC files stored under `compilation/static` (or other JSONC files at the repo root such as `restaurants.jsonc` and `homepage.jsonc`).
 - **Format**: Files are JSONC (JSON with comments allowed). Each restaurant entry is an object keyed by a slug with fields such as `slug`, `name`, `description`, `hours`, `contact`, `local_logo_path`, `remote_logo_url`, `local_banner_path`, and `remote_banner_url`.
+ - **Format**: Files are JSONC (JSON with comments allowed). Each restaurant entry is an object keyed by a slug with fields such as `slug`, `name`, `description`, `hours`, `contact`, `local_logo_path`, `remote_logo_url`, `local_banner_path`, and `remote_banner_url`.
+ - **New fields**: Two new metadata fields are supported per entry:
+	 - `created_by`: string — name of the person who created the entry (e.g. "John Mulligan" or "Evan Vaagen").
+	 - `edited_by`: array of strings — people who edited the entry (the compiler displays these as a comma-separated list). Each string should be on its own line in the JSONC for readability.
 - **Example (restaurant entry):**
 ```jsonc
 "gracies": {
@@ -67,5 +71,6 @@ python3 compilation/compile_pages.py --restaurants restaurants.jsonc --homepage 
 # Notes & tips
 - **Overwriting:** Generated files will overwrite existing files in the `docs/` output directory.
 - **Adding restaurants:** Add new entries to your restaurants JSONC (e.g., `restaurants.jsonc`) following the example structure and re-run the compiler.
+ - **Adding restaurants:** Add new entries to your restaurants JSONC (e.g., `restaurants.jsonc`) following the example structure and re-run the compiler. Include `created_by` and `edited_by` if you want that metadata displayed on the compiled page.
 - **Template changes:** Edit `templates/skeleton.html` to change the look of all compiled pages.
 
