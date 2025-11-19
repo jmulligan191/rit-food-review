@@ -30,6 +30,15 @@ env/
 # ignore testing python files i'm messing with
 _*.py 
 
+# Ignore compiled python files
+*.pyc
+*.pyo
+
+# Ignore cache and build files
+*.egg-info/
+__pycache__/
+.pytest_cache/
+build/
 
 # Ignore node_modules (JS stuff)
 node_modules/
