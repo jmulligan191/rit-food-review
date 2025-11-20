@@ -30,6 +30,20 @@ this site aims to help you make informed decisions about where to eat on campus.
 	"local_banner_path": "media/gracies_banner.png"
 }
 ```
+- **Example (Review entry):**
+```jsonc
+{
+	"author": "John Doe", // name of the reviewer
+	"author_image_url": "https://example.com/profiles/johndoe.jpg", // optional URL to the reviewer's profile image (or null)
+	"date": "2024-10-01", // date of the review in YYYY-MM-DD format
+	"rating": 4, // rating out of 5 (stars?)
+	"description": "Great variety of food options and accommodating to dietary needs. The pizza station is a favorite!", // content of the review
+	"attachment_url": null, // optional URL to an image related to the review, shows alongside the review if present (or null)
+
+	"upvotes": 12, // number of upvotes the review has received
+	"downvotes": 2 // number of downvotes the review has received
+},
+```
 
 ## Compilation / Build
 - **Purpose**: A Python script reads the JSONC files and compiles them into final HTML pages using Jinja templates. Generated pages are written into the `docs/` folder (for example `docs/restaurants/{slug}.html` and `docs/index.html`).
