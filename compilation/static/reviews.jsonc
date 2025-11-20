@@ -3,7 +3,7 @@
         // put all the reviews for this resturaunt inside the [] array
         {
             "author": "John Doe", // name of the reviewer
-            "author_image_url": "https://example.com/profiles/johndoe.jpg", // optional URL to the reviewer's profile image
+            "author_image_url": "https://example.com/profiles/johndoe.jpg", // optional URL to the reviewer"s profile image
             "date": "2024-10-01", // date of the review in YYYY-MM-DD format
             "rating": 4, // rating out of 5 (stars?)
             "description": "Great variety of food options and accommodating to dietary needs. The pizza station is a favorite!", // content of the review
@@ -22,7 +22,52 @@
             "downvotes": 1
         }
     ], // end of reviews array for Gracies
+    "crossroads": [
+
+    ],
+    "cantina": [
+
+    ],
+    "ritz": [
+
+    ],
+    "brick_city": [
+
+    ],
     "nathans": [
-        // put more reviews here
+        
+    ],
+    "loaded-latke": [
+
+    ],
+    "midnight-oil": [
+
+    ],
+    "college-grind": [
+        
+    ],
+    "ben-and-jerrys": [
+
+    ],
+    "commons": [
+
+    ],
+    "beanz": [
+
+    ],
+    "artesanos": [
+
+    ],
+    "ctrl-alt-deli": [
+
+    ],
+    "petals": [
+
+    ],
+    "javas": [
+
+    ],
+    "bytes": [
+
     ]
 }
