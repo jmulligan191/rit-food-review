@@ -28,18 +28,18 @@
                 <div class="col-md-3">
                     {% if logo_url %}
                         {% if logo_url.startswith('http') or logo_url.startswith('//') %}
-                            <img src="{{ logo_url }}" alt="{{ item.name }} logo" class="logo-img" />
+                            <img src="{{ logo_url }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
                         {% else %}
-                            <img src="{{ media_prefix }}{{ logo_url }}" alt="{{ item.name }} logo" class="logo-img" />
+                            <img src="{{ media_prefix }}{{ logo_url }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
                         {% endif %}
                     {% elif item.local_logo_path %}
                         {% if item.local_logo_path.startswith('http') or item.local_logo_path.startswith('//') %}
-                            <img src="{{ item.local_logo_path }}" alt="{{ item.name }} logo" class="logo-img" />
+                            <img src="{{ item.local_logo_path }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
                         {% else %}
-                            <img src="{{ media_prefix }}{{ item.local_logo_path }}" alt="{{ item.name }} logo" class="logo-img" />
+                            <img src="{{ media_prefix }}{{ item.local_logo_path }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
                         {% endif %}
                     {% elif item.remote_logo_url %}
-                        <img src="{{ item.remote_logo_url }}" alt="{{ item.name }} logo" class="logo-img" />
+                        <img src="{{ item.remote_logo_url }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
                     {% endif %}
                 </div>
                 <div class="col-md-9">
