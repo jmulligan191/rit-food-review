@@ -1,0 +1,27 @@
+/* Layout for banner and logo images to prevent oversized renders */
+
+.banner-img {
+	width: 100%;
+	max-height: 320px;
+	object-fit: cover;
+	display: block;
+}
+
+.logo-img {
+	height: 40px;
+	max-height: 60px;
+	width: auto;
+	object-fit: contain;
+	display: inline-block;
+}
+
+.card-img-top.card-media-img {
+	width: 100%;
+	max-height: 180px;
+	object-fit: cover;
+}
+
+/* small screens tweak for banners */
+@media (max-width: 576px) {
+	.banner-img { max-height: 200px; }
+}

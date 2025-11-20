@@ -38,7 +38,7 @@ def build_banner_html(item: dict, media_prefix: str = "") -> str:
         return ""
     if not (banner.startswith("http") or banner.startswith("//")):
         banner = f"{media_prefix}{banner}"
-    return f'<div class="banner"><img src="{banner}" alt="{item.get("name","")} banner" class="img-fluid w-100"/></div>'
+    return f'<div class="banner"><img src="{banner}" alt="{item.get("name","")} banner" class="img-fluid w-100 banner-img"/></div>'
 
 def main():
     p = argparse.ArgumentParser(description="Compile JSONC files into HTML pages using a Jinja template")
@@ -157,9 +157,9 @@ def main():
     for c in cards:
         if c["logo"]:
             if c["logo"].startswith("http") or c["logo"].startswith("//"):
-                img = f'<img src="{c["logo"]}" class="card-img-top" alt="{c["name"]} logo">'
+                img = f'<img src="{c["logo"]}" class="card-img-top card-media-img" alt="{c["name"]} logo">'
             else:
-                img = f'<img src="{cards_media_prefix}{c["logo"]}" class="card-img-top" alt="{c["name"]} logo">'
+                img = f'<img src="{cards_media_prefix}{c["logo"]}" class="card-img-top card-media-img" alt="{c["name"]} logo">'
         else:
             img = ""
         card_html = f'''<div class="col-md-4 mb-4"><div class="card h-100">{img}<div class="card-body"><h5 class="card-title">{c["name"]}</h5><p class="card-text">{c["description"]}</p><a href="./{c["slug"]}.html" class="stretched-link">View</a></div></div></div>'''

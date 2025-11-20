@@ -11,12 +11,12 @@
     {% else %}
         {% if item.local_banner_path %}
             {% if item.local_banner_path.startswith('http') or item.local_banner_path.startswith('//') %}
-                <div class="banner"><img src="{{ item.local_banner_path }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100"/></div>
+                <div class="banner"><img src="{{ item.local_banner_path }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100 banner-img"/></div>
             {% else %}
-                <div class="banner"><img src="{{ media_prefix }}{{ item.local_banner_path }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100"/></div>
+                <div class="banner"><img src="{{ media_prefix }}{{ item.local_banner_path }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100 banner-img"/></div>
             {% endif %}
         {% elif item.remote_banner_url %}
-            <div class="banner"><img src="{{ item.remote_banner_url }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100"/></div>
+            <div class="banner"><img src="{{ item.remote_banner_url }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100 banner-img"/></div>
         {% endif %}
     {% endif %}
 {% endblock %}
@@ -28,18 +28,18 @@
                 <div class="col-md-3">
                     {% if logo_url %}
                         {% if logo_url.startswith('http') or logo_url.startswith('//') %}
-                            <img src="{{ logo_url }}" alt="{{ item.name }} logo" class="img-fluid" />
+                            <img src="{{ logo_url }}" alt="{{ item.name }} logo" class="logo-img" />
                         {% else %}
-                            <img src="{{ media_prefix }}{{ logo_url }}" alt="{{ item.name }} logo" class="img-fluid" />
+                            <img src="{{ media_prefix }}{{ logo_url }}" alt="{{ item.name }} logo" class="logo-img" />
                         {% endif %}
                     {% elif item.local_logo_path %}
                         {% if item.local_logo_path.startswith('http') or item.local_logo_path.startswith('//') %}
-                            <img src="{{ item.local_logo_path }}" alt="{{ item.name }} logo" class="img-fluid" />
+                            <img src="{{ item.local_logo_path }}" alt="{{ item.name }} logo" class="logo-img" />
                         {% else %}
-                            <img src="{{ media_prefix }}{{ item.local_logo_path }}" alt="{{ item.name }} logo" class="img-fluid" />
+                            <img src="{{ media_prefix }}{{ item.local_logo_path }}" alt="{{ item.name }} logo" class="logo-img" />
                         {% endif %}
                     {% elif item.remote_logo_url %}
-                        <img src="{{ item.remote_logo_url }}" alt="{{ item.name }} logo" class="img-fluid" />
+                        <img src="{{ item.remote_logo_url }}" alt="{{ item.name }} logo" class="logo-img" />
                     {% endif %}
                 </div>
                 <div class="col-md-9">

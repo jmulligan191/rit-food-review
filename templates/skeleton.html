@@ -21,7 +21,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-secondary d-flex" aria-label="navbar" id="Navbar">
         <div class="container-fluid">
-            <a class="navbar-brand p-0 ps-2" href="{{ site_prefix }}index.html"><img src="{{ media_prefix }}media/images/logo.png" style="height: 40px;"></a>
+            <a class="navbar-brand p-0 ps-2" href="{{ site_prefix }}index.html"><img src="{{ media_prefix }}media/images/logo.png" class="logo-img" alt="RIT Food Review logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcontent"
                 aria-controls="navbarcontent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,17 +43,17 @@
     <!-- Banner -->
     {% block banner %}
     {# Banner: either pass `banner_html` or let template pick local/remote banner #}
-    {% if banner_html is defined and banner_html %}
+        {% if banner_html is defined and banner_html %}
         {{ banner_html|safe }}
-        {% else %}
+    {% else %}
         {% if item.local_banner_path %}
             {% if item.local_banner_path.startswith('http') or item.local_banner_path.startswith('//') %}
-                <div class="banner"><img src="{{ item.local_banner_path }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100"/></div>
+                <div class="banner"><img src="{{ item.local_banner_path }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100 banner-img"/></div>
             {% else %}
-                <div class="banner"><img src="{{ media_prefix }}{{ item.local_banner_path }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100"/></div>
+                <div class="banner"><img src="{{ media_prefix }}{{ item.local_banner_path }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100 banner-img"/></div>
             {% endif %}
         {% elif item.remote_banner_url %}
-            <div class="banner"><img src="{{ item.remote_banner_url }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100"/></div>
+            <div class="banner"><img src="{{ item.remote_banner_url }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100 banner-img"/></div>
         {% endif %}
     {% endif %}
     {% endblock %}
