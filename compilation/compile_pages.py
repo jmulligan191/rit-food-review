@@ -126,12 +126,13 @@ def main():
         # rendered page's directory to the output `media/` folder.
         rel = os.path.relpath(str(outdir), str(filename.parent))
         media_prefix = (rel + "/") if rel != "." else ""
+        site_prefix = media_prefix
 
         banner_html = build_banner_html(item, media_prefix)
         logo_url = choose_image(item, "local_logo_path", "remote_logo_url") or ""
         # use restaurant template for individual pages; pass media_prefix so
         # templates can prepend it for local media paths (e.g. "../")
-        rendered = skeleton_restaurant.render(item=item, page_title=item.get("name"), banner_html=banner_html, logo_url=logo_url, extra_content="", media_prefix=media_prefix)
+        rendered = skeleton_restaurant.render(item=item, page_title=item.get("name"), banner_html=banner_html, logo_url=logo_url, extra_content="", media_prefix=media_prefix, site_prefix=site_prefix)
         filename.write_text(rendered, encoding="utf-8")
         print(f"Wrote {filename}")
 
@@ -151,6 +152,8 @@ def main():
     # images point at the correct `media/` path.
     rel_cards = os.path.relpath(str(outdir), str(rest_out))
     cards_media_prefix = (rel_cards + "/") if rel_cards != "." else ""
+    index_media_prefix = cards_media_prefix
+    index_site_prefix = index_media_prefix
     for c in cards:
         if c["logo"]:
             if c["logo"].startswith("http") or c["logo"].startswith("//"):
@@ -166,8 +169,7 @@ def main():
 
     # render index page using template; pass media_prefix appropriate for
     # the restaurants index location
-    index_media_prefix = cards_media_prefix
-    index_rendered = skeleton.render(item={"name":"Restaurants Index","description":"All restaurants"}, page_title="Restaurants", banner_html="", logo_url="", extra_content=index_extra, media_prefix=index_media_prefix)
+    index_rendered = skeleton.render(item={"name":"Restaurants Index","description":"All restaurants"}, page_title="Restaurants", banner_html="", logo_url="", extra_content=index_extra, media_prefix=index_media_prefix, site_prefix=index_site_prefix)
     index_file = rest_out / "index.html"
     index_file.write_text(index_rendered, encoding="utf-8")
     print(f"Wrote {index_file}")
@@ -188,9 +190,10 @@ def main():
         # homepage lives at the output root so media paths should be referenced
         # directly (no "../" prefix).
         homepage_media_prefix = ""
+        homepage_site_prefix = ""
         homepage_banner = build_banner_html(homepage, homepage_media_prefix)
         homepage_logo = choose_image(homepage, "local_logo_path", "remote_logo_url") or ""
-        homepage_rendered = skeleton.render(item=homepage, page_title=homepage.get("title") or homepage.get("name"), banner_html=homepage_banner, logo_url=homepage_logo, extra_content=homepage.get("extra_content",""), media_prefix=homepage_media_prefix)
+        homepage_rendered = skeleton.render(item=homepage, page_title=homepage.get("title") or homepage.get("name"), banner_html=homepage_banner, logo_url=homepage_logo, extra_content=homepage.get("extra_content",""), media_prefix=homepage_media_prefix, site_prefix=homepage_site_prefix)
         homepage_file = outdir / "index.html"
         homepage_file.write_text(homepage_rendered, encoding="utf-8")
         print(f"Wrote {homepage_file}")
