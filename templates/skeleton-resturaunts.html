@@ -46,7 +46,7 @@
                     <h1>{{ item.name|default('Unnamed Restaurant') }}</h1>
                     <p>{{ item.description|default('No description available.') }}</p>
                     {% if item.website_slug or item.website %}
-                        <p><a href="{{ item.website or ('https://www.rit.edu/dining/' + (item.website_slug or '')) }}" target="_blank">Visit official page</a></p>
+                        <p><a href="{{ item.website or ('https://www.rit.edu/dining/location/' + (item.website_slug or '')) }}" target="_blank">Visit official page</a></p>
                     {% endif %}
                 </div>
             </div>
