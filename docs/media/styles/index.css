@@ -1,4 +1,3 @@
-/* Layout for banner and logo images to prevent oversized renders */
 
 .banner-img {
 	width: 100%;
@@ -15,7 +14,7 @@
 	display: inline-block;
 }
 
-/* Larger logo variant for restaurant pages */
+/* large logo for restaurant pages */
 .logo-large {
 	height: auto;
 	max-height: 180px;
