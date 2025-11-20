@@ -10,7 +10,44 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link href="../media/styles/index.css" rel="stylesheet" type="text/css" />
+    <link href="../media/styles/index.css" rel="stylesheet" type="text/css" id="site-styles" />
+    <!-- Fallback loader: if the primary stylesheet (Jinja-rendered) fails to load
+         (e.g. viewing this template file directly), try a small list of likely
+         relative paths until one succeeds. This only activates when the primary
+         fails to load; compiled pages will load the right stylesheet normally. -->
+    <script>
+        (function () {
+            var primary = document.getElementById('site-styles');
+            var tried = false;
+            var candidates = ['media/styles/index.css', '../media/styles/index.css', '../docs/media/styles/index.css', '/media/styles/index.css'];
+            function makeFallbackLink() {
+                var l = document.getElementById('site-styles-fallback');
+                if (!l) {
+                    l = document.createElement('link');
+                    l.rel = 'stylesheet';
+                    l.id = 'site-styles-fallback';
+                    document.head.appendChild(l);
+                }
+                return l;
+            }
+            function tryNext(i) {
+                if (i >= candidates.length) return;
+                var l = makeFallbackLink();
+                l.onload = function () { if (primary) primary.disabled = true; };
+                l.onerror = function () { tryNext(i + 1); };
+                l.href = candidates[i];
+            }
+            if (primary) {
+                primary.addEventListener('load', function () {
+                    var fb = document.getElementById('site-styles-fallback'); if (fb) fb.remove();
+                });
+                primary.addEventListener('error', function () { if (!tried) { tried = true; tryNext(0); } });
+            } else {
+                // no primary link; just try fallbacks
+                tryNext(0);
+            }
+        })();
+    </script>
 
     <link rel='icon' href="../media/images/logo.png" type='image/x-icon' />
 
@@ -21,7 +58,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-secondary d-flex" aria-label="navbar" id="Navbar">
         <div class="container-fluid">
-            <a class="navbar-brand p-0 ps-2" href="../index.html"><img src="../media/images/logo.png" style="height: 40px;"></a>
+            <a class="navbar-brand p-0 ps-2" href="../index.html"><img src="../media/images/logo.png" class="logo-img" alt="RIT Food Review logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcontent"
                 aria-controls="navbarcontent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,7 +81,7 @@
     
     
     
-        <div class="banner"><img src="../media/images/restauraunts/ben_and_jerrys_banner.jpg" alt="Ben & Jerry's banner" class="img-fluid w-100"/></div>
+        <div class="banner"><img src="../media/images/restauraunts/ben_and_jerrys_banner.jpg" alt="Ben & Jerry's banner" class="img-fluid w-100 banner-img"/></div>
     
 
 
@@ -56,7 +93,7 @@
                 <div class="col-md-3">
                     
                         
-                            <img src="../media/images/restauraunts/ben_and_jerrys_logo.png" alt="Ben &amp; Jerry&#39;s logo" class="img-fluid" />
+                            <img src="../media/images/restauraunts/ben_and_jerrys_logo.png" alt="Ben &amp; Jerry&#39;s logo" class="logo-img" />
                         
                     
                 </div>
