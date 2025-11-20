@@ -5,106 +5,118 @@
 {% block title %}{{ item.name|default('Restaurant') }} - {{ super() }}{% endblock %}
 
 {% block banner %}
-    {# Prefer banner_html if provided, otherwise use item banner (inherited logic) #}
-    {% if banner_html is defined and banner_html %}
-        {{ banner_html|safe }}
-    {% else %}
-        {% if item.local_banner_path %}
-            {% if item.local_banner_path.startswith('http') or item.local_banner_path.startswith('//') %}
-                <div class="banner"><img src="{{ item.local_banner_path }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100 banner-img"/></div>
-            {% else %}
-                <div class="banner"><img src="{{ media_prefix }}{{ item.local_banner_path }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100 banner-img"/></div>
-            {% endif %}
-        {% elif item.remote_banner_url %}
-            <div class="banner"><img src="{{ item.remote_banner_url }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100 banner-img"/></div>
-        {% endif %}
-    {% endif %}
+{# Prefer banner_html if provided, otherwise use item banner (inherited logic) #}
+{% if banner_html is defined and banner_html %}
+{{ banner_html|safe }}
+{% else %}
+{% if item.local_banner_path %}
+{% if item.local_banner_path.startswith('http') or item.local_banner_path.startswith('//') %}
+<div class="banner"><img src="{{ item.local_banner_path }}" alt="{{ item.name|default('') }} banner"
+        class="img-fluid w-100 banner-img" /></div>
+{% else %}
+<div class="banner"><img src="{{ media_prefix }}{{ item.local_banner_path }}" alt="{{ item.name|default('') }} banner"
+        class="img-fluid w-100 banner-img" /></div>
+{% endif %}
+{% elif item.remote_banner_url %}
+<div class="banner"><img src="{{ item.remote_banner_url }}" alt="{{ item.name|default('') }} banner"
+        class="img-fluid w-100 banner-img" /></div>
+{% endif %}
+{% endif %}
 {% endblock %}
 
 {% block content %}
-    <div id="content" style="margin-left: 10px; margin-top: 8px;">
-        <div class="container">
-            <div class="row my-3">
-                <div class="col-md-3">
-                    {% if logo_url %}
-                        {% if logo_url.startswith('http') or logo_url.startswith('//') %}
-                            <img src="{{ logo_url }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
-                        {% else %}
-                            <img src="{{ media_prefix }}{{ logo_url }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
-                        {% endif %}
-                    {% elif item.local_logo_path %}
-                        {% if item.local_logo_path.startswith('http') or item.local_logo_path.startswith('//') %}
-                            <img src="{{ item.local_logo_path }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
-                        {% else %}
-                            <img src="{{ media_prefix }}{{ item.local_logo_path }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
-                        {% endif %}
-                    {% elif item.remote_logo_url %}
-                        <img src="{{ item.remote_logo_url }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
-                    {% endif %}
-                </div>
-                <div class="col-md-9">
-                    <h1>{{ item.name|default('Unnamed Restaurant') }}</h1>
-                    <p>{{ item.description|default('No description available.') }}</p>
-                    {% if item.website_slug or item.website %}
-                        <p><a href="{{ item.website or ('https://www.rit.edu/dining/location/' + (item.website_slug or '')) }}" target="_blank">Visit official page</a></p>
-                    {% endif %}
-                </div>
+<div id="content" style="margin-left: 10px; margin-top: 8px;">
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-md-3">
+                {% if logo_url %}
+                {% if logo_url.startswith('http') or logo_url.startswith('//') %}
+                <img src="{{ logo_url }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
+                {% else %}
+                <img src="{{ media_prefix }}{{ logo_url }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
+                {% endif %}
+                {% elif item.local_logo_path %}
+                {% if item.local_logo_path.startswith('http') or item.local_logo_path.startswith('//') %}
+                <img src="{{ item.local_logo_path }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
+                {% else %}
+                <img src="{{ media_prefix }}{{ item.local_logo_path }}" alt="{{ item.name }} logo"
+                    class="logo-img logo-large" />
+                {% endif %}
+                {% elif item.remote_logo_url %}
+                <img src="{{ item.remote_logo_url }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
+                {% endif %}
             </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <h4>Hours</h4>
-                    {% if item.hours %}
-                        <table class="table table-sm"><tbody>
-                            {% for day in ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'] %}
-                                <tr><th style="width:35%">{{ day.capitalize() }}</th><td>{{ item.hours.get(day) or 'Closed' }}</td></tr>
-                            {% endfor %}
-                        </tbody></table>
-                    {% else %}
-                        <p>No hours available.</p>
-                    {% endif %}
-                </div>
-                <div class="col-md-4">
-                    <h4>Contact</h4>
-                    {% if item.contact %}
-                        <p><strong>Phone:</strong> {{ item.contact.phone or 'N/A' }}</p>
-                        <p><strong>Email:</strong> {{ item.contact.email or 'N/A' }}</p>
-                    {% else %}
-                        <p>No contact info.</p>
-                    {% endif %}
-                    {% if item.address %}
-                        <p><strong>Address:</strong> {{ item.address }}</p>
-                    {% endif %}
-                </div>
-                <div class="col-md-4">
-                    <h4>Meta</h4>
-                    {% if item.created_at %}
-                        <p><strong>Created:</strong> <time class="js-local-time" datetime="{{ item.created_at }}" data-epoch="{{ item.created_at_epoch_ms|default('') }}">{{ item.created_at }}</time></p>
-                    {% endif %}
-                    {% if item.updated_at %}
-                        <p><strong>Updated:</strong> <time class="js-local-time" datetime="{{ item.updated_at }}" data-epoch="{{ item.updated_at_epoch_ms|default('') }}">{{ item.updated_at }}</time></p>
-                    {% endif %}
-                    {% if item.created_by %}
-                        <p><strong>Created by:</strong> {{ item.created_by }}</p>
-                    {% endif %}
-                    {% if item.edited_by %}
-                        <p><strong>Edited by:</strong> {{ item.edited_by | join(', ') }}</p>
-                    {% endif %}
-                </div>
+            <div class="col-md-9">
+                <h1>{{ item.name|default('Unnamed Restaurant') }}</h1>
+                <p>{{ item.description|default('No description available.') }}</p>
+                {% if item.website_slug or item.website %}
+                <p><a href="{{ item.website or ('https://www.rit.edu/dining/location/' + (item.website_slug or '')) }}"
+                        target="_blank">Visit official page</a></p>
+                {% endif %}
             </div>
-
-            {% if item.menu %}
-                <div class="row my-3">
-                    <div class="col-12">
-                        <h4>Menu</h4>
-                        {{ item.menu|safe }}
-                    </div>
-                </div>
-            {% endif %}
-
-            {% if extra_content is defined and extra_content %}
-                {{ extra_content|safe }}
-            {% endif %}
         </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Hours</h4>
+                {% if item.hours %}
+                <table class="table table-sm">
+                    <tbody>
+                        {% for day in ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'] %}
+                        <tr>
+                            <th style="width:35%">{{ day.capitalize() }}</th>
+                            <td>{{ item.hours.get(day) or 'Closed' }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <p>No hours available.</p>
+                {% endif %}
+            </div>
+            <div class="col-md-4">
+                <h4>Contact</h4>
+                {% if item.contact %}
+                <p><strong>Phone:</strong> {{ item.contact.phone or 'N/A' }}</p>
+                <p><strong>Email:</strong> {{ item.contact.email or 'N/A' }}</p>
+                {% else %}
+                <p>No contact info.</p>
+                {% endif %}
+                {% if item.address %}
+                <p><strong>Address:</strong> {{ item.address }}</p>
+                {% endif %}
+            </div>
+            <div class="col-md-4">
+                <h4>Meta</h4>
+                {% if item.created_at %}
+                <p><strong>Created:</strong> <time class="js-local-time" datetime="{{ item.created_at }}"
+                        data-epoch="{{ item.created_at_epoch_ms|default('') }}">{{ item.created_at }}</time></p>
+                {% endif %}
+                {% if item.updated_at %}
+                <p><strong>Updated:</strong> <time class="js-local-time" datetime="{{ item.updated_at }}"
+                        data-epoch="{{ item.updated_at_epoch_ms|default('') }}">{{ item.updated_at }}</time></p>
+                {% endif %}
+                {% if item.created_by %}
+                <p><strong>Created by:</strong> {{ item.created_by }}</p>
+                {% endif %}
+                {% if item.edited_by %}
+                <p><strong>Edited by:</strong> {{ item.edited_by | join(', ') }}</p>
+                {% endif %}
+            </div>
+        </div>
+
+        {% if item.menu %}
+        <div class="row my-3">
+            <div class="col-12">
+                <h4>Menu</h4>
+                {{ item.menu|safe }}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if extra_content is defined and extra_content %}
+        {{ extra_content|safe }}
+        {% endif %}
     </div>
+</div>
 {% endblock %}

@@ -58,7 +58,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary site-navbar d-flex" aria-label="navbar" id="Navbar">
         <div class="container-fluid">
-            <a class="navbar-brand p-0 ps-2" href="{{ site_prefix }}index.html"><img src="{{ media_prefix }}media/images/logo.png" class="logo-img" alt="RIT Food Review logo"></a>
+            <a class="navbar-brand p-0 ps-2" href="{{ site_prefix }}index.html"><img
+                    src="{{ media_prefix }}media/images/logo.png" class="logo-img" alt="RIT Food Review logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcontent"
                 aria-controls="navbarcontent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -80,18 +81,21 @@
     <!-- Banner -->
     {% block banner %}
     {# Banner: either pass `banner_html` or let template pick local/remote banner #}
-        {% if banner_html is defined and banner_html %}
-        {{ banner_html|safe }}
+    {% if banner_html is defined and banner_html %}
+    {{ banner_html|safe }}
     {% else %}
-        {% if item.local_banner_path %}
-            {% if item.local_banner_path.startswith('http') or item.local_banner_path.startswith('//') %}
-                <div class="banner"><img src="{{ item.local_banner_path }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100 banner-img"/></div>
-            {% else %}
-                <div class="banner"><img src="{{ media_prefix }}{{ item.local_banner_path }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100 banner-img"/></div>
-            {% endif %}
-        {% elif item.remote_banner_url %}
-            <div class="banner"><img src="{{ item.remote_banner_url }}" alt="{{ item.name|default('') }} banner" class="img-fluid w-100 banner-img"/></div>
-        {% endif %}
+    {% if item.local_banner_path %}
+    {% if item.local_banner_path.startswith('http') or item.local_banner_path.startswith('//') %}
+    <div class="banner"><img src="{{ item.local_banner_path }}" alt="{{ item.name|default('') }} banner"
+            class="img-fluid w-100 banner-img" /></div>
+    {% else %}
+    <div class="banner"><img src="{{ media_prefix }}{{ item.local_banner_path }}"
+            alt="{{ item.name|default('') }} banner" class="img-fluid w-100 banner-img" /></div>
+    {% endif %}
+    {% elif item.remote_banner_url %}
+    <div class="banner"><img src="{{ item.remote_banner_url }}" alt="{{ item.name|default('') }} banner"
+            class="img-fluid w-100 banner-img" /></div>
+    {% endif %}
     {% endif %}
     {% endblock %}
 
@@ -108,7 +112,9 @@
 
             {# Pages may provide arbitrary extra HTML via `extra_content` #}
             {% if extra_content is defined and extra_content %}
-                <div class="row"><div class="col-12">{{ extra_content|safe }}</div></div>
+            <div class="row">
+                <div class="col-12">{{ extra_content|safe }}</div>
+            </div>
             {% endif %}
         </div>
     </div>
@@ -116,14 +122,17 @@
 
     <!-- footer -->
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-body-secondary">© 2025 John Mulligan and SWEN-101-02 2251 Group 1</p> <a href="{{ site_prefix }}index.html"
+        <p class="col-md-4 mb-0 text-body-secondary">© 2025 John Mulligan and SWEN-101-02 2251 Group 1</p> <a
+            href="{{ site_prefix }}index.html"
             class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
             aria-label="Bootstrap"> <svg class="bi me-2" width="40" height="32" aria-hidden="true">
                 <use xlink:href="#bootstrap"></use>
             </svg> </a>
         <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="{{ site_prefix }}index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="https://github.com/jmulligan191/rit-food-review" class="nav-link px-2 text-body-secondary">GitHub</a></li>
+            <li class="nav-item"><a href="{{ site_prefix }}index.html"
+                    class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="https://github.com/jmulligan191/rit-food-review"
+                    class="nav-link px-2 text-body-secondary">GitHub</a></li>
             <!-- -->
             <!-- <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
