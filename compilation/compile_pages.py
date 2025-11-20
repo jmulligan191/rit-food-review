@@ -10,6 +10,7 @@ import json
 from pathlib import Path
 import json5
 from datetime import datetime
+import os
 
 def load_jsonc(path: Path):
     """Load a JSONC file (JSON with comments) and return the parsed data."""
@@ -24,10 +25,19 @@ def choose_image(item: dict, local_key: str, remote_key: str) -> str:
     return remote or ""
 
 
-def build_banner_html(item: dict) -> str:
+def build_banner_html(item: dict, media_prefix: str = "") -> str:
+    """Build banner HTML, prefixing local media paths with `media_prefix`.
+
+    `item` may contain `local_banner_path` (a local path like
+    `media/images/...`) or `remote_banner_url`. If the chosen banner looks
+    like a local path (doesn't start with http or //) prepend the provided
+    `media_prefix` so the rendered page points to the correct location.
+    """
     banner = choose_image(item, "local_banner_path", "remote_banner_url")
     if not banner:
         return ""
+    if not (banner.startswith("http") or banner.startswith("//")):
+        banner = f"{media_prefix}{banner}"
     return f'<div class="banner"><img src="{banner}" alt="{item.get("name","")} banner" class="img-fluid w-100"/></div>'
 
 def main():
@@ -112,10 +122,16 @@ def main():
         _attach_epoch('created_at')
         _attach_epoch('updated_at')
         filename = rest_out / f"{slug}.html"
-        banner_html = build_banner_html(item)
+        # compute a media prefix so local media paths resolve correctly from the
+        # rendered page's directory to the output `media/` folder.
+        rel = os.path.relpath(str(outdir), str(filename.parent))
+        media_prefix = (rel + "/") if rel != "." else ""
+
+        banner_html = build_banner_html(item, media_prefix)
         logo_url = choose_image(item, "local_logo_path", "remote_logo_url") or ""
-        # use restaurant template for individual pages
-        rendered = skeleton_restaurant.render(item=item, page_title=item.get("name"), banner_html=banner_html, logo_url=logo_url, extra_content="")
+        # use restaurant template for individual pages; pass media_prefix so
+        # templates can prepend it for local media paths (e.g. "../")
+        rendered = skeleton_restaurant.render(item=item, page_title=item.get("name"), banner_html=banner_html, logo_url=logo_url, extra_content="", media_prefix=media_prefix)
         filename.write_text(rendered, encoding="utf-8")
         print(f"Wrote {filename}")
 
@@ -130,15 +146,28 @@ def main():
 
     # restaurants index page (cards)
     cards_html = []
+    # Cards are rendered into the restaurants index (which lives in the
+    # `rest_out` directory). Compute media_prefix for that location so card
+    # images point at the correct `media/` path.
+    rel_cards = os.path.relpath(str(outdir), str(rest_out))
+    cards_media_prefix = (rel_cards + "/") if rel_cards != "." else ""
     for c in cards:
-        img = f'<img src="{c["logo"]}" class="card-img-top" alt="{c["name"]} logo">' if c["logo"] else ""
+        if c["logo"]:
+            if c["logo"].startswith("http") or c["logo"].startswith("//"):
+                img = f'<img src="{c["logo"]}" class="card-img-top" alt="{c["name"]} logo">'
+            else:
+                img = f'<img src="{cards_media_prefix}{c["logo"]}" class="card-img-top" alt="{c["name"]} logo">'
+        else:
+            img = ""
         card_html = f'''<div class="col-md-4 mb-4"><div class="card h-100">{img}<div class="card-body"><h5 class="card-title">{c["name"]}</h5><p class="card-text">{c["description"]}</p><a href="./{c["slug"]}.html" class="stretched-link">View</a></div></div></div>'''
         cards_html.append(card_html)
 
     index_extra = '<div class="container"><div class="row">' + '\n'.join(cards_html) + '</div></div>'
 
-    # render index page using template
-    index_rendered = skeleton.render(item={"name":"Restaurants Index","description":"All restaurants"}, page_title="Restaurants", banner_html="", logo_url="", extra_content=index_extra)
+    # render index page using template; pass media_prefix appropriate for
+    # the restaurants index location
+    index_media_prefix = cards_media_prefix
+    index_rendered = skeleton.render(item={"name":"Restaurants Index","description":"All restaurants"}, page_title="Restaurants", banner_html="", logo_url="", extra_content=index_extra, media_prefix=index_media_prefix)
     index_file = rest_out / "index.html"
     index_file.write_text(index_rendered, encoding="utf-8")
     print(f"Wrote {index_file}")
@@ -156,9 +185,12 @@ def main():
             raise SystemExit(1)
 
         # render homepage into outdir/index.html
-        homepage_banner = build_banner_html(homepage)
+        # homepage lives at the output root so media paths should be referenced
+        # directly (no "../" prefix).
+        homepage_media_prefix = ""
+        homepage_banner = build_banner_html(homepage, homepage_media_prefix)
         homepage_logo = choose_image(homepage, "local_logo_path", "remote_logo_url") or ""
-        homepage_rendered = skeleton.render(item=homepage, page_title=homepage.get("title") or homepage.get("name"), banner_html=homepage_banner, logo_url=homepage_logo, extra_content=homepage.get("extra_content",""))
+        homepage_rendered = skeleton.render(item=homepage, page_title=homepage.get("title") or homepage.get("name"), banner_html=homepage_banner, logo_url=homepage_logo, extra_content=homepage.get("extra_content",""), media_prefix=homepage_media_prefix)
         homepage_file = outdir / "index.html"
         homepage_file.write_text(homepage_rendered, encoding="utf-8")
         print(f"Wrote {homepage_file}")
