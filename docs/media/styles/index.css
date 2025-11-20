@@ -38,3 +38,19 @@
 @media (max-width: 576px) {
 	.banner-img { max-height: 200px; }
 }
+
+:root {
+	/* --site-primary: #0d6efd; /* default bootstrap primary; change as desired */
+	--site-primary: #e37c27ff; /* RIT magenta */
+}
+
+/* Apply the primary color to the navbar when `site-navbar` is used */
+.site-navbar {
+	background-color: var(--site-primary) !important;
+}
+
+.site-navbar .nav-link,
+.site-navbar .navbar-brand {
+	color: #fff !important;
+}
+
