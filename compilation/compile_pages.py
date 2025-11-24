@@ -130,9 +130,15 @@ def main():
 
         banner_html = build_banner_html(item, media_prefix)
         logo_url = choose_image(item, "local_logo_path", "remote_logo_url") or ""
+        # compute an online ordering URL if the data includes an ordering id
+        ordering_id = item.get("online_ordering_id", None)
+        ordering_url = None
+        if ordering_id is not None:
+            ordering_url = f"https://ondemand.rit.edu/?SE={ordering_id}"
         # use restaurant template for individual pages; pass media_prefix so
-        # templates can prepend it for local media paths (e.g. "../")
-        rendered = skeleton_restaurant.render(item=item, page_title=item.get("name"), banner_html=banner_html, logo_url=logo_url, extra_content="", media_prefix=media_prefix, site_prefix=site_prefix)
+        # templates can prepend it for local media paths (e.g. "../"). Also
+        # pass ordering_url (if any) so templates can show an Order Online link.
+        rendered = skeleton_restaurant.render(item=item, page_title=item.get("name"), banner_html=banner_html, logo_url=logo_url, extra_content="", media_prefix=media_prefix, site_prefix=site_prefix, ordering_url=ordering_url)
         filename.write_text(rendered, encoding="utf-8")
         print(f"Wrote {filename}")
 
