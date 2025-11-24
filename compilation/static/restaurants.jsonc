@@ -28,6 +28,8 @@
             //"website": "https://www.rit.edu/dining/gracies-dining-hall",
         },
 
+        "online_ordering_id": null,
+
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Gracies_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/gracies_logo.png", // slug
 
@@ -66,6 +68,8 @@
             //"website": "https://www.rit.edu/dining/crossroads",
         },
 
+        "online_ordering_id": 7,
+
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Crossroads_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/crossroads_logo.png", // slug
 
@@ -101,6 +105,8 @@
             "phone": "(585) 475-3453",
             "email": null
         },
+
+        "online_ordering_id": 8,
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Cantina%20and%20Grille_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/cantina_logo.png", // slug
@@ -138,6 +144,8 @@
             "email": null
         },
 
+        "online_ordering_id": 9,
+
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2025-06/RITZ_LogoBlack.png",
         "local_logo_path": "media/images/restauraunts/ritz_logo.png", // slug
 
@@ -173,6 +181,8 @@
             "phone": "(585) 475-2869",
             "email": null
         },
+
+        "online_ordering_id": null,
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Brick%20City_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/brick_city_logo.png", // slug
@@ -210,6 +220,8 @@
             "email": null
         },
 
+        "online_ordering_id": 10,
+
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Nathans_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/nathans_logo.png", // slug
 
@@ -245,6 +257,8 @@
             "phone": "(585) 475-5000",
             "email": null
         },
+
+        "online_ordering_id": null,
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Loaded%20Latke_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/loaded_latke_logo.png", // slug
@@ -286,6 +300,8 @@
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Midnight%20Oil_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/midnight_oil_logo.png", // slug
 
+        "online_ordering_id": 4,
+
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_midnightoil.jpg",
         "local_banner_path": "media/images/restauraunts/midnight_oil_banner.jpg",
 
@@ -319,6 +335,8 @@
             "phone": "(585) 475-6440",
             "email": null
         },
+
+        "online_ordering_id": 5,
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_College%20Grind_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/college_grind_logo.png", // slug
@@ -357,6 +375,8 @@
             "email": null
         },
 
+        "online_ordering_id": null,
+
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Ben_and_Jerrys_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/ben_and_jerrys_logo.png", // slug
 
@@ -393,6 +413,8 @@
             "phone": "(585) 475-6440",
             "email": null
         },
+
+        "online_ordering_id": 14,
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Commons_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/commons_logo.png", // slug
@@ -431,6 +453,8 @@
             "email": null
         },
 
+        "online_ordering_id": 3,
+
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Beanz_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/beanz_logo.png", // slug
 
@@ -467,6 +491,8 @@
             "phone": "(585) 475-3111",
             "email": null
         },
+
+        "online_ordering_id": 2,
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Artesano_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/artesanos_logo.png", // slug
@@ -505,6 +531,8 @@
             "email": null
         },
 
+        "online_ordering_id": 11,
+
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_CtrlAltDeli_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/ctrl_alt_deli_logo.png", // slug
 
@@ -541,6 +569,8 @@
             "phone": "(585) 359-1800",
             "email": null
         },
+
+        "online_ordering_id": null,
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Petals_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/petals_logo.png", // slug
@@ -579,6 +609,8 @@
             "email": null
         },
 
+        "online_ordering_id": null,
+
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Javas_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/javas_logo.png", // slug
 
@@ -616,6 +648,8 @@
             "phone": null,
             "email": null
         },
+
+        "online_ordering_id": null,
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Bytes_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/bytes_logo.png", // slug
