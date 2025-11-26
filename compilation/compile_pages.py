@@ -69,6 +69,14 @@ def main():
     rest_out = outdir / "restaurants"
     rest_out.mkdir(parents=True, exist_ok=True)
 
+    reviews_src = Path("compilation/static/reviews.jsonc")
+    reviews_map = {}
+    if reviews_src.exists():
+        try:
+            reviews_map = load_jsonc(reviews_src)
+        except Exception as e:
+            print(f"Warning: failed to load reviews from {reviews_src}: {e}")
+
     # create specific restaurant pages, collect summary for index
     cards = []
     try:
@@ -135,10 +143,33 @@ def main():
         ordering_url = None
         if ordering_id is not None:
             ordering_url = f"https://ondemand.rit.edu/?SE={ordering_id}"
+        # attach reviews for this restaurant (if any)
+        reviews = []
+        try:
+            # reviews_map keys are expected to be slugs
+            raw_reviews = reviews_map.get(slug) or reviews_map.get(key) or []
+            if isinstance(raw_reviews, list):
+                # parse dates and attach epoch ms for each review; ignore parse errors
+                for r in raw_reviews:
+                    d = r.get("date")
+                    if isinstance(d, str) and d:
+                        try:
+                            dt = datetime.fromisoformat(d)
+                            r["date_parsed"] = dt
+                            r["date_epoch_ms"] = int(dt.timestamp() * 1000)
+                        except Exception:
+                            r["date_parsed"] = None
+                            r["date_epoch_ms"] = None
+                # sort reviews by parsed date descending (newest first)
+                reviews = sorted([r for r in raw_reviews if isinstance(r, dict)], key=lambda x: x.get("date_parsed") or datetime.min, reverse=True)
+            else:
+                reviews = []
+        except Exception:
+            reviews = []
         # use restaurant template for individual pages; pass media_prefix so
         # templates can prepend it for local media paths (e.g. "../"). Also
         # pass ordering_url (if any) so templates can show an Order Online link.
-        rendered = skeleton_restaurant.render(item=item, page_title=item.get("name"), banner_html=banner_html, logo_url=logo_url, extra_content="", media_prefix=media_prefix, site_prefix=site_prefix, ordering_url=ordering_url)
+        rendered = skeleton_restaurant.render(item=item, page_title=item.get("name"), banner_html=banner_html, logo_url=logo_url, extra_content="", media_prefix=media_prefix, site_prefix=site_prefix, ordering_url=ordering_url, reviews=reviews)
         filename.write_text(rendered, encoding="utf-8")
         print(f"Wrote {filename}")
 
