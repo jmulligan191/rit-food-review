@@ -689,14 +689,15 @@
         },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_The%20Corner%20Store_170x170_black.png",
-        "local_logo_path": "media/corner_store_logo.png", // slug
+        "local_logo_path": "media/images/restauraunts/corner_store_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_Cornerstore.jpg",
-        "local_banner_path": "media/corner_store_banner.jpg",
+        "local_banner_path": "media/images/restauraunts/corner_store_banner.jpg",
 
         "created_by": "Evan Vaagen",
         "edited_by": [
-            "Evan Vaagen"
+            "Evan Vaagen",
+            "John Mulligan"
         ],
         "created_at": "2025-11-25T19:29:00-05:00",
         "updated_at": "2025-11-25T19:29:00-05:00"
@@ -725,14 +726,15 @@
         },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_The%20Market_170x170_black.png",
-        "local_logo_path": "media/global_market_logo.png", // slug
+        "local_logo_path": "media/images/restauraunts/global_market_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_MarketAtGlobalVillage.jpg",
-        "local_banner_path": "media/global_market_banner.jpg",
+        "local_banner_path": "media/images/restauraunts/global_market_banner.jpg",
 
         "created_by": "Evan Vaagen",
         "edited_by": [
-            "Evan Vaagen"
+            "Evan Vaagen",
+            "John Mulligan"
         ],
         "created_at": "2025-11-25T19:29:00-05:00",
         "updated_at": "2025-11-25T19:29:00-05:00"
