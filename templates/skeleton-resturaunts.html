@@ -2,6 +2,26 @@
 
 {# Restaurant-specific template: extends the base skeleton and provides additional fields #}
 
+{# Macro to render 1-5 star rating as inline SVGs #}
+{% macro render_stars(rating) %}
+<span class="review-stars" aria-label="{{ rating }} out of 5 stars">
+    {% for i in range(1,6) %}
+    {% if i <= (rating|int) %} <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg" class="star filled" aria-hidden="true">
+        <path
+            d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.174L12 18.896l-7.336 3.876 1.402-8.174L.132 9.21l8.2-1.192L12 .587z" />
+        </svg>
+        {% else %}
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            xmlns="http://www.w3.org/2000/svg" class="star empty" aria-hidden="true">
+            <path
+                d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.174L12 18.896l-7.336 3.876 1.402-8.174L.132 9.21l8.2-1.192L12 .587z" />
+        </svg>
+        {% endif %}
+        {% endfor %}
+</span>
+{% endmacro %}
+
 {% block title %}{{ item.name|default('Restaurant') }} - {{ super() }}{% endblock %}
 
 {% block banner %}
@@ -49,18 +69,19 @@
             <div class="col-md-9">
                 <h1>{{ item.name|default('Unnamed Restaurant') }}</h1>
                 <p>{{ item.description|default('No description available.') }}</p>
-                    {% if item.website_slug or item.website or ordering_url %}
-                    <p>
-                        {% if item.website_slug or item.website %}
-                            <a href="{{ item.website or ('https://www.rit.edu/dining/location/' + (item.website_slug or '')) }}" target="_blank" rel="noopener noreferrer">Visit official page</a>
-                        {% endif %}
-                        {% if ordering_url %}
-                            {# small separator if both links present #}
-                            {% if item.website_slug or item.website %} &nbsp;|&nbsp; {% endif %}
-                            <a href="{{ ordering_url }}" target="_blank" rel="noopener noreferrer">Order online</a>
-                        {% endif %}
-                    </p>
+                {% if item.website_slug or item.website or ordering_url %}
+                <p>
+                    {% if item.website_slug or item.website %}
+                    <a href="{{ item.website or ('https://www.rit.edu/dining/location/' + (item.website_slug or '')) }}"
+                        target="_blank" rel="noopener noreferrer">Visit official page</a>
                     {% endif %}
+                    {% if ordering_url %}
+                    {# small separator if both links present #}
+                    {% if item.website_slug or item.website %} &nbsp;|&nbsp; {% endif %}
+                    <a href="{{ ordering_url }}" target="_blank" rel="noopener noreferrer">Order online</a>
+                    {% endif %}
+                </p>
+                {% endif %}
             </div>
         </div>
 
@@ -124,6 +145,51 @@
 
         {% if extra_content is defined and extra_content %}
         {{ extra_content|safe }}
+        {% endif %}
+
+        {# Reviews: expects `reviews` to be passed as a list of review objects keyed by slug in reviews.jsonc #}
+        {% if reviews is defined and reviews|length > 0 %}
+        <div class="row my-3">
+            <div class="col-12">
+                <h4>Reviews ({{ reviews|length }})</h4>
+                {% for r in reviews %}
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div class="me-3">
+                                {% if r.author_image_url %}
+                                {% if r.author_image_url.startswith('http') or r.author_image_url.startswith('//') %}
+                                <img src="{{ r.author_image_url }}" class="rounded-circle" alt="{{ r.author }} avatar"
+                                    style="width:48px;height:48px;object-fit:cover;">
+                                {% else %}
+                                <img src="{{ media_prefix }}{{ r.author_image_url }}" class="rounded-circle"
+                                    alt="{{ r.author }} avatar" style="width:48px;height:48px;object-fit:cover;">
+                                {% endif %}
+                                {% endif %}
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5 class="mb-1">{{ r.author or 'Anonymous' }} <small class="text-muted"> — {{ r.date
+                                        }}</small></h5>
+                                <div class="mb-2">{{ render_stars(r.rating|int) }}</div>
+                                <p class="mb-1">{{ r.description }}</p>
+                                {% if r.attachment_url %}
+                                {% if r.attachment_url.startswith('http') or r.attachment_url.startswith('//') %}
+                                <img src="{{ r.attachment_url }}" alt="review attachment" class="img-fluid mt-2"
+                                    style="max-width:240px;">
+                                {% else %}
+                                <img src="{{ media_prefix }}{{ r.attachment_url }}" alt="review attachment"
+                                    class="img-fluid mt-2" style="max-width:240px;">
+                                {% endif %}
+                                {% endif %}
+                                <p class="mt-2 text-muted small">👍 {{ r.upvotes or 0 }} &nbsp; 👎 {{ r.downvotes or 0
+                                    }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
         {% endif %}
     </div>
 </div>
