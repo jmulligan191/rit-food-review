@@ -42,7 +42,7 @@
             "date": "2025-10-02",
             "rating": 5,
             "description": "Big cantina fan. Little known fact the salad shells give you more food (+ an edible bowl) for $9 than the large burrito bowls for $13 (with worse tasting bowls)",
-            "attachment_url": "https://example.com/reviews/gracies-food.jpg",
+            "attachment_url": null,
             "upvotes": 91,
             "downvotes": 1
         },
@@ -52,7 +52,7 @@
             "date": "2025-09-15",
             "rating": 2,
             "description": "A single plate of nachos cost me a third of my meal plan. What are we doing RIT.",
-            "attachment_url": "https://example.com/reviews/gracies-food.jpg",
+            "attachment_url": null,
             "upvotes": 128,
             "downvotes": 49
         }
@@ -64,7 +64,7 @@
             "date": "2025-10-01",
             "rating": 5,
             "description": "The food here is just so good!!! Also money saving trick: a full sub is only $16 and can easily hold you over for an entire day.",
-            "attachment_url": "https://example.com/reviews/gracies-food.jpg",
+            "attachment_url": null,
             "upvotes": 499,
             "downvotes": 12
         }
@@ -94,7 +94,7 @@
             "date": "2025-09-12",
             "rating": 4,
             "description": "The food hits, but not in the same way it did when it was fully open. Please come back.",
-            "attachment_url": "https://example.com/reviews/gracies-food.jpg",
+            "attachment_url": null,
             "upvotes": 905,
             "downvotes": 4
         },
@@ -104,7 +104,7 @@
             "date": "2025-11-18",
             "rating": 3,
             "description": "I ordered my daily 20pc chicken nuggets and two were stuck together so I pulled them apart and liquid chicken nugget came out. I don't know if I'll be ordering chicken here again.",
-            "attachment_url": "https://example.com/reviews/gracies-food.jpg",
+            "attachment_url": null,
             "upvotes": 243,
             "downvotes": 32
         },
@@ -114,7 +114,7 @@
             "date": "2024-03-14",
             "rating": 5,
             "description": "I love coming here at night, the food is really good and hits hard especially when nothing else is open. I just kinda wish they'd open up the seating area.",
-            "attachment_url": "https://example.com/reviews/gracies-food.jpg",
+            "attachment_url": null,
             "upvotes": 514,
             "downvotes": 25
         }
@@ -126,7 +126,7 @@
             "date": "2024-04-28",
             "rating": 5,
             "description": "giant apple fritters and giant muffins. dont get pistacahio though midnight oil's was a lot better",
-            "attachment_url": "https://example.com/reviews/gracies-food.jpg",
+            "attachment_url": null,
             "upvotes": 243,
             "downvotes": 32
         },
@@ -136,7 +136,7 @@
             "date": "2024-11-19",
             "rating": 3,
             "description": "The food is okay. Drinks are pretty good. But the most notable aspect here is the fact that it sits GLEEFULLY, MALICIOUSLY outside Res A and Baker. Every day leaving my dorm was a test of will, and if I failed, I starved in December. Beware.",
-            "attachment_url": "https://example.com/reviews/gracies-food.jpg",
+            "attachment_url": null,
             "upvotes": 190,
             "downvotes": 4
         }
@@ -160,7 +160,7 @@
             "date": "2011-02-04",
             "rating": 3,
             "description": "Okay selection. really good if you need something in a pinch, but that's about it. Also the card scanner has been only semi-function all four years I've been here. I could come back in like 2025 and I bet it'd still be broken.",
-            "attachment_url": "https://example.com/reviews/gracies-food.jpg",
+            "attachment_url": null,
             "upvotes": 1102,
             "downvotes": 65
         },
@@ -170,9 +170,24 @@
             "date": "2025-04-12",
             "rating": 3,
             "description": "They're marketed as 24-hour locations but only like 2 of them are in buildings that are open 24/7 (Booth and Gannett). Also you will not be impressed, it's literally just a convenience store. Card scanner also does not work 90% of the time.",
-            "attachment_url": "https://example.com/reviews/gracies-food.jpg",
+            "attachment_url": null,
             "upvotes": 602,
             "downvotes": 32
+        }
+    ],
+    "corner-store": [
+
+    ],
+    "global-market": [
+        {
+            "author": "Jane Smith",
+            "author_image_url": null,
+            "date": "2025-10-04",
+            "rating": 5,
+            "description": "Very nice selection and the environment reminds me of a cozy shop back at home. also why did they draw ritchie like that",
+            "attachment_url": null,
+            "upvotes": 412,
+            "downvotes": 11
         }
     ]
 }

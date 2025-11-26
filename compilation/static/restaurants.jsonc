@@ -664,6 +664,78 @@
         ],
         "created_at": "2025-10-31T17:22:00-04:00",
         "updated_at": "2025-11-19T15:54:00-05:00"
+    },
+
+    "corner-store": {
+        "slug": "corner-store",
+        "website_slug": "corner-store",
+
+        "name": "The Corner Store",
+        "description": "We are a small grocery store open late and conveniently located in the tunnels of the residence halls. We carry groceries, fresh produce, microwavable entrées, dairy products, snacks, toiletries, school supplies, grab-and-go sandwiches, ice cream, and beverages.",
+
+        "hours": {
+            "monday": "8:30AM-11:59PM",
+            "tuesday": "8:30AM-11:59PM",
+            "wednesday": "8:30AM-11:59PM",
+            "thursday": "8:30AM-11:59PM",
+            "friday": "8:30AM-11:59PM",
+            "saturday": "10:00AM-11:59PM",
+            "sunday": "10:00AM-11:59PM"
+        },
+
+        "contact": {
+            "phone": "(585) 475-5758",
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_The%20Corner%20Store_170x170_black.png",
+        "local_logo_path": "media/corner_store_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_Cornerstore.jpg",
+        "local_banner_path": "media/corner_store_banner.jpg",
+
+        "created_by": "Evan Vaagen",
+        "edited_by": [
+            "Evan Vaagen"
+        ],
+        "created_at": "2025-11-25T19:29:00-05:00",
+        "updated_at": "2025-11-25T19:29:00-05:00"
+    },
+
+    "global-market": {
+        "slug": "global-market",
+        "website_slug": "market-global-village",
+
+        "name": "The Market at Global Village",
+        "description": "We are a destination for groceries, produce, toiletries, and beverages. We also have an array of international ingredients, seasonings, snacks, and candy. Our international selection changes often, so visit frequently to see what's new.",
+
+        "hours": {
+            "monday": "8:00AM-10:00PM",
+            "tuesday": "8:00AM-10:00PM",
+            "wednesday": "8:00AM-10:00PM",
+            "thursday": "8:00AM-10:00PM",
+            "friday": "8:00AM-8:00PM",
+            "saturday": "10:00AM-8:00PM",
+            "sunday": "10:00AM-8:00PM"
+        },
+
+        "contact": {
+            "phone": "(585) 475-3454",
+            "email": null
+        },
+
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_The%20Market_170x170_black.png",
+        "local_logo_path": "media/global_market_logo.png", // slug
+
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_MarketAtGlobalVillage.jpg",
+        "local_banner_path": "media/global_market_banner.jpg",
+
+        "created_by": "Evan Vaagen",
+        "edited_by": [
+            "Evan Vaagen"
+        ],
+        "created_at": "2025-11-25T19:29:00-05:00",
+        "updated_at": "2025-11-25T19:29:00-05:00"
     }
     // there are more places can we add them in
 }
