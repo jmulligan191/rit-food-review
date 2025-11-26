@@ -206,7 +206,7 @@ def main():
 
     # render index page using template; pass media_prefix appropriate for
     # the restaurants index location
-    index_rendered = skeleton.render(item={"name":"Restaurants Index","description":"All restaurants"}, page_title="Restaurants", banner_html="", logo_url="", extra_content=index_extra, media_prefix=index_media_prefix, site_prefix=index_site_prefix)
+    index_rendered = skeleton.render(item={"name":"Restaurants Index","description":""}, page_title="Restaurants", banner_html="", logo_url="", extra_content=index_extra, media_prefix=index_media_prefix, site_prefix=index_site_prefix)
     index_file = rest_out / "index.html"
     index_file.write_text(index_rendered, encoding="utf-8")
     print(f"Wrote {index_file}")
