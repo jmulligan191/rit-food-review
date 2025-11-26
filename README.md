@@ -1,3 +1,6 @@
+# Live Site
+Check out the live site at https://jmulligan191.github.io/rit-food-review/.
+
 # the best food review site at RIT
 Welcome to the RIT Food Review site! This website provides comprehensive reviews and information about various dining
 options available at the Rochester Institute of Technology (RIT). Whether you're a student, faculty member, or visitor,
