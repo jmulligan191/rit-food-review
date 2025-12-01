@@ -1181,7 +1181,14 @@
             ]
         },
 
-        "tags": [],
+        "tags": [
+            "convenience store",
+            "snacks",
+            "drinks",
+            "frozen food",
+            "essentials",
+            "late night"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_The%20Corner%20Store_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/corner_store_logo.png", // slug
