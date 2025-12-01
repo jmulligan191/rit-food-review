@@ -1,0 +1,555 @@
+/* The following document was sourced from the https://maps.rit.edu/ API at https://mapserver.rit.edu/api/menus/75/locations?full= */
+{
+    "menu": {
+        "id": 75,
+        "name": "Restaurants",
+        "type": "sub",
+        "icon": null,
+        "fullName": null,
+        "sortorder": 9,
+        "event_id": 3,
+        "parent_id": 7
+    },
+    "locations": [
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 7,
+                "mdo_id": 2,
+                "name": "Gracie's",
+                "descShort": "Restaurant ",
+                "descLong": "Gracie's serves an all-you-care-to-eat menu with daily rotating meals and is a peanut- and tree-nut-free, except for the coconut. There is a selection of plant-based options, brick-oven pizza, daily specials, barbecue, desserts, rotating international cuisines, and weekend brunch.\r\n<br><br>\r\nGluten-free and vegan foods are available daily at the allergen-friendly station, designated by the purple utensils and staff aprons. This station eliminates nine allergens – crustacean shellfish, eggs, fish, milk, peanuts, sesame seeds, tree nuts, wheat, and gluten.\r\n<br><br>\r\nThis location is cashless. Customers using cash may use a <a href=\"https://www.rit.edu/fa/diningservices/add-funds/\" target=\"_blank\">Tiger Spend Reload Station</a> to add funds to an existing RIT ID card or a Reload Card.\r\n<br><br>\r\nOrder online at <a href=\"https://ondemand.rit.edu/\" target=\"_blank\">ondemand.rit.edu</a>\r\n",
+                "webLink": "https://www.rit.edu/dining/location/gracies",
+                "abbreviation": "GWH",
+                "buildingNumber": "025",
+                "roomNumber": "1918",
+                "hours": "<a href=\"https://www.rit.edu/fa/diningservices/hours-and-locations\" target=\"_blank\">All Dining Hours</a>",
+                "isSearchable": true,
+                "geometry_id": 7,
+                "images": [
+                    {
+                        "alt": "Gracie's",
+                        "filename": "Gracies.jpg",
+                        "url": "https://maps.rit.edu/pictures/Gracies_16X9.jpg",
+                        "mdo_id": 2,
+                        "location_id": 7
+                    }
+                ],
+                "clic": "21"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.66921,
+                    43.08359
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 447,
+                "mdo_id": 122,
+                "name": "Brick City Cafe",
+                "descShort": "Restaurant",
+                "descLong": "Brick City Café serves breakfast sandwiches, breakfast staples, a build-your-own salad and sandwich station, vegan grill and daily entrée specials. Grab-and-go salads, fruit cups, yogurts, bottled beverages, and coffee from Finger Lakes Coffee Roasters® are available. \r\n<br><br>\r\nOrder online at <a href=\"https://ondemand.rit.edu/\" target=\"_blank\">ondemand.rit.edu</a>\r\n",
+                "webLink": "https://www.rit.edu/dining/location/brick-city-cafe",
+                "abbreviation": "SAU",
+                "buildingNumber": "004",
+                "floorLevel": "1st floor",
+                "hours": "<a href=\"https://www.rit.edu/fa/diningservices/hours-and-locations\" target=\"_blank\">All Dining Hours</a>",
+                "isSearchable": true,
+                "geometry_id": 447,
+                "images": [
+                    {
+                        "alt": "Brick City Cafe",
+                        "filename": "Brick_City_9245.jpg",
+                        "url": "https://maps.rit.edu/pictures/KitchenAtBrickCity_16x9.jpg",
+                        "mdo_id": 122,
+                        "location_id": 447
+                    }
+                ],
+                "clic": "22"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.67457,
+                    43.08384
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 451,
+                "mdo_id": 123,
+                "name": "Cafe & Market at Crossroads",
+                "descShort": "Restaurant",
+                "descLong": "The Café and Market at Crossroads features Asian cuisine, daily chef specials, grill, pizza, paninis, subs, salads, and hand-made sushi.<br><br>\r\nOrder online at <a href=\"https://ondemand.rit.edu/\" target=\"_blank\">ondemand.rit.edu</a>\r\n",
+                "webLink": "https://www.rit.edu/dining/location/cafe-and-market-crossroads",
+                "abbreviation": "CRS",
+                "buildingNumber": "089",
+                "floorLevel": "1st floor",
+                "hours": "<a href=\"https://www.rit.edu/fa/diningservices/hours-and-locations\" target=\"_blank\">All Dining Hours</a>",
+                "isSearchable": true,
+                "geometry_id": 451,
+                "images": [
+                    {
+                        "alt": "Cafe & Market at Crossroads",
+                        "filename": "Crossroads.jpg",
+                        "url": "https://maps.rit.edu/pictures/Crossroads.jpg",
+                        "mdo_id": 123,
+                        "location_id": 451
+                    }
+                ],
+                "clic": "23"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.679952,
+                    43.082566
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 455,
+                "mdo_id": 124,
+                "name": "The Commons",
+                "descShort": "Restaurant ",
+                "descLong": "The Commons serves subs, wraps, made-to-order salads, grill favorites with plant-based options, and pasta bowls.\r\n<br><br>\r\nOrder online at <a href=\"https://ondemand.rit.edu/\" target=\"_blank\">ondemand.rit.edu</a>\r\n",
+                "webLink": "https://www.rit.edu/dining/location/commons",
+                "abbreviation": "CSD",
+                "buildingNumber": "055",
+                "floorLevel": "2nd floor",
+                "hours": "<a href=\"https://www.rit.edu/fa/diningservices/hours-and-locations\" target=\"_blank\">All Dining Hours</a>",
+                "isSearchable": true,
+                "geometry_id": 455,
+                "images": [
+                    {
+                        "alt": "The Commons",
+                        "filename": "Commons-0132.jpg",
+                        "url": "https://maps.rit.edu/pictures/Commons_16X9.jpg",
+                        "mdo_id": 124,
+                        "location_id": 455
+                    }
+                ],
+                "clic": "24"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.66912,
+                    43.086502
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 459,
+                "mdo_id": 125,
+                "name": "Cantina & Grille at Global Village",
+                "descShort": "Restaurant",
+                "descLong": "The Cantina & Grille offers made-to-order international cuisines. Fresh Mexican serves made-to-order tacos, burritos, and quesadillas. The Global Grille rotates Mediterranean, Asian Noodles, and Indian cuisine monthly.\r\n<br><br>\r\nOrder online at <a href=\"https://ondemand.rit.edu/\" target=\"_blank\">ondemand.rit.edu</a>\r\n",
+                "phone": "(585) 475-3454",
+                "webLink": "https://www.rit.edu/dining/location/cantina-and-grille-global-village",
+                "abbreviation": "GVP",
+                "buildingNumber": "400",
+                "floorLevel": "1st floor",
+                "hours": "<a href=\"https://www.rit.edu/fa/diningservices/hours-and-locations\" target=\"_blank\">All Dining Hours</a>",
+                "isSearchable": true,
+                "geometry_id": 459,
+                "images": [
+                    {
+                        "alt": "Global Village Cantina and Grille",
+                        "filename": "GVCantina_Grille.jpg",
+                        "url": "https://maps.rit.edu/pictures/GVCantina_Grille.jpg",
+                        "mdo_id": 125,
+                        "location_id": 459
+                    },
+                    {
+                        "alt": "Cantina & Grill",
+                        "url": "https://maps.rit.edu/pictures/Cantina_16x9.jpg",
+                        "mdo_id": 125,
+                        "location_id": 459
+                    }
+                ],
+                "clic": "25"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.680885,
+                    43.083225
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 463,
+                "mdo_id": 126,
+                "name": "RITZ",
+                "descShort": "Restaurant",
+                "descLong": "RITZ is the ultimate fan hub for celebrating your Tiger spirit! Enjoy our famous specials like the pasta bake and paninis with our in-house tiger sauce. We also serve grill sandwiches, subs, pizza, and grab-and-go items.\r\n<br><br>\r\nOrder online at <a href=\"https://ondemand.rit.edu/\" target=\"_blank\">ondemand.rit.edu</a>\r\n",
+                "webLink": "https://www.rit.edu/dining/location/ritz",
+                "abbreviation": "SAU",
+                "buildingNumber": "004",
+                "floorLevel": "A level",
+                "hours": "<a href=\"https://www.rit.edu/fa/diningservices/hours-and-locations\" target=\"_blank\">All Dining Hours</a>",
+                "isSearchable": true,
+                "geometry_id": 463,
+                "images": [
+                    {
+                        "alt": "RITZ Sports Zone",
+                        "filename": "RITZ-1367.jpg",
+                        "url": "https://maps.rit.edu/pictures/RITZ-16X9.jpg",
+                        "mdo_id": 126,
+                        "location_id": 463
+                    }
+                ],
+                "clic": "26"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.674805,
+                    43.08382
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 599,
+                "mdo_id": 163,
+                "name": "CTRL ALT DELi",
+                "descShort": "Restaurant",
+                "descLong": "Design a hot or cold sandwich, pizza, panini, or wrap. Crtl Alt DELi offers breakfast sandwiches and grab-and-go options, including bagels, baked goods, pastries, fresh fruit, and salads.\r\n<br><br>\r\nOrder online at <a href=\"https://ondemand.rit.edu/\" target=\"_blank\">ondemand.rit.edu</a>\r\n",
+                "phone": "(585) 475-2998",
+                "webLink": "https://www.rit.edu/dining/location/ctrl-alt-deli",
+                "abbreviation": "GOL",
+                "buildingNumber": "070",
+                "floorLevel": "1st floor",
+                "hours": "<a href=\"https://www.rit.edu/fa/diningservices/hours-and-locations\" target=\"_blank\">All Dining Hours</a>",
+                "isSearchable": true,
+                "geometry_id": 599,
+                "images": [
+                    {
+                        "alt": "CTRL ALT DELi",
+                        "filename": "Ctrl_Deli_8478.jpg",
+                        "url": "https://maps.rit.edu/pictures/CtrlAltDeli_16X9.jpg",
+                        "mdo_id": 163,
+                        "location_id": 599
+                    }
+                ],
+                "clic": "34"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.680105,
+                    43.084617
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 607,
+                "mdo_id": 166,
+                "name": "Nathan's Soup & Salad",
+                "descShort": "Restaurant",
+                "descLong": "Warm up with hearty home-style soups, sandwiches, wraps, and freshly baked breads. Nathan's was started by RIT alum, Jake Torcello '09.",
+                "webLink": "https://www.rit.edu/dining/location/nathans-soup-salad",
+                "abbreviation": "SAU",
+                "buildingNumber": "004",
+                "floorLevel": "1st floor",
+                "hours": "<a href=\"https://www.rit.edu/fa/diningservices/hours-and-locations\" target=\"_blank\">All Dining Hours</a></br></br> <b>Brick City Homecoming Hours</b></br> Thursday, Friday, Saturday 10 AM - 6 PM</br> Saturday & Sunday 10 AM - 2 PM </br></br>",
+                "isSearchable": true,
+                "geometry_id": 607,
+                "images": [
+                    {
+                        "alt": "Nathan's Soup & Salad",
+                        "url": "https://maps.rit.edu/pictures/Nathans_16x9.jpg",
+                        "mdo_id": 166,
+                        "location_id": 607
+                    }
+                ],
+                "clic": "36"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.674576,
+                    43.08406
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 3679,
+                "mdo_id": 1005,
+                "name": "USB - The College Grind",
+                "descShort": "Smoothies",
+                "descLong": "Located at Beanz and The College Grind, Ultimate Smoothie Blendz (USB) creates handcrafted smoothies with a blend of 100% real fruits, vegetables and cold-pressed juices from local orchard, Red Jacket. These juices are all natural, unfiltered and have no added sugar nor water. Along with the cold pressed juices, our smoothies use Red Jack Stomps, which are unfiltered and cold pressed black currant, blueberry and tart cherry nectar.",
+                "webLink": "https://www.rit.edu/fa/diningservices/usb-ultimate-smoothie-blendz",
+                "abbreviation": "CSD",
+                "buildingNumber": "055",
+                "floorLevel": "1st floor",
+                "hours": "<a href=\"https://www.rit.edu/fa/diningservices/hours-and-locations\" target=\"_blank\">All Dining Hours</a>",
+                "isSearchable": true,
+                "geometry_id": 3679,
+                "images": [
+                    {
+                        "alt": "USB - The College Grind",
+                        "filename": "USB-CollegeGrind.jpg",
+                        "url": "https://maps.rit.edu/pictures/USB-CollegeGrind.jpg",
+                        "mdo_id": 1005,
+                        "location_id": 3679
+                    }
+                ],
+                "clic": "39"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.66916,
+                    43.08649
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 3683,
+                "mdo_id": 1006,
+                "name": "USB - Crossroads",
+                "descShort": "Smoothies",
+                "descLong": "Located at Beanz and The College Grind, Ultimate Smoothie Blendz (USB) creates handcrafted smoothies with a blend of 100% real fruits, vegetables and cold-pressed juices from local orchard, Red Jacket. These juices are all natural, unfiltered and have no added sugar nor water. Along with the cold pressed juices, our smoothies use Red Jack Stomps, which are unfiltered and cold pressed black currant, blueberry and tart cherry nectar.",
+                "webLink": "https://www.rit.edu/fa/diningservices/usb-ultimate-smoothie-blendz",
+                "abbreviation": "CRS",
+                "buildingNumber": "089",
+                "floorLevel": "1st floor",
+                "hours": "<a href=\"https://www.rit.edu/fa/diningservices/hours-and-locations\" target=\"_blank\">All Dining Hours</a>",
+                "isSearchable": true,
+                "geometry_id": 3683,
+                "images": [
+                    {
+                        "alt": "USB - Crossroads",
+                        "filename": "USB-Crossroads.jpg",
+                        "url": "https://maps.rit.edu/pictures/USB-Crossroads.jpg",
+                        "mdo_id": 1006,
+                        "location_id": 3683
+                    }
+                ],
+                "clic": "39"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.67992,
+                    43.082592
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 3687,
+                "mdo_id": 1007,
+                "name": "USB - Beanz",
+                "descShort": "Smoothies",
+                "descLong": "Located at Beanz and The College Grind, Ultimate Smoothie Blendz (USB) creates handcrafted smoothies with a blend of 100% real fruits, vegetables and cold-pressed juices from local orchard, Red Jacket. These juices are all natural, unfiltered and have no added sugar nor water. Along with the cold pressed juices, our smoothies use Red Jack Stomps, which are unfiltered and cold pressed black currant, blueberry and tart cherry nectar.",
+                "webLink": "https://www.rit.edu/fa/diningservices/usb-ultimate-smoothie-blendz",
+                "abbreviation": "GWH",
+                "buildingNumber": "025",
+                "floorLevel": "1st floor",
+                "hours": "<a href=\"https://www.rit.edu/fa/diningservices/hours-and-locations\" target=\"_blank\">All Dining Hours</a>",
+                "isSearchable": true,
+                "geometry_id": 3687,
+                "images": [
+                    {
+                        "alt": "USB - Beanz",
+                        "filename": "USB-Beanz.jpg",
+                        "url": "https://maps.rit.edu/pictures/USB-Beanz.jpg",
+                        "mdo_id": 1007,
+                        "location_id": 3687
+                    }
+                ],
+                "clic": "39"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.66894,
+                    43.083584
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 7304,
+                "mdo_id": 2894,
+                "name": "Loaded Latke",
+                "descShort": "Restaurant",
+                "descLong": "Loaded Latke is a certified Kosher deli under the supervision of STAR-K Kosher Certification. They serve traditional hand-crafted sandwiches with premium meats, house-made bagel chips, matzo ball soup, potato salad, latkes, pickles, and Dr. Brown's beverages.",
+                "webLink": "https://www.rit.edu/dining/location/loaded-latke",
+                "abbreviation": "MON",
+                "buildingNumber": "015",
+                "floorLevel": "1st floor",
+                "roomNumber": "1030",
+                "isSearchable": true,
+                "geometry_id": 7013,
+                "images": [
+                    {
+                        "alt": "Loaded_Latkes",
+                        "url": "https://maps.rit.edu/pictures/Loaded_Latkes_16x9.jpg",
+                        "mdo_id": 2894,
+                        "location_id": 7304
+                    }
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.675122,
+                    43.084042
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 7749,
+                "mdo_id": 2907,
+                "name": "Petals at RIT Inn",
+                "descShort": "Located at the RIT Inn & Conference Center, Petals is a restaurant that is open for breakfast, lunch, and dinner. Petals serve a variety of American fare, with customizable entrees and daily specials.",
+                "webLink": "https://www.rit.edu/ritinn/dining/petals-restaurant",
+                "isSearchable": true,
+                "geometry_id": 6487,
+                "images": [
+                    {
+                        "alt": "Petals at RIT Inn",
+                        "url": "https://maps.rit.edu/pictures/Petals_16x9.jpg",
+                        "mdo_id": 2907,
+                        "location_id": 7749
+                    }
+                ]
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -77.6597786506825,
+                            43.0489920618035
+                        ],
+                        [
+                            -77.6598545132217,
+                            43.0484867202198
+                        ],
+                        [
+                            -77.6595802409638,
+                            43.0484590009406
+                        ],
+                        [
+                            -77.6595860765442,
+                            43.0484014300902
+                        ],
+                        [
+                            -77.6594927072645,
+                            43.0483907688159
+                        ],
+                        [
+                            -77.6595189673743,
+                            43.0482393785175
+                        ],
+                        [
+                            -77.6585356721531,
+                            43.0481540880444
+                        ],
+                        [
+                            -77.6585327543629,
+                            43.0482180559106
+                        ],
+                        [
+                            -77.6584860697237,
+                            43.0482159236493
+                        ],
+                        [
+                            -77.6584773163538,
+                            43.0482500398186
+                        ],
+                        [
+                            -77.6584160427643,
+                            43.0482415107779
+                        ],
+                        [
+                            -77.6583664403343,
+                            43.0485314974902
+                        ],
+                        [
+                            -77.6581855373561,
+                            43.0485165717369
+                        ],
+                        [
+                            -77.6581534416665,
+                            43.0486743580867
+                        ],
+                        [
+                            -77.6583635225448,
+                            43.0486956805354
+                        ],
+                        [
+                            -77.6583343446448,
+                            43.0489259625079
+                        ],
+                        [
+                            -77.6584189605538,
+                            43.0489366236893
+                        ],
+                        [
+                            -77.6583985360244,
+                            43.0490752188799
+                        ],
+                        [
+                            -77.6594022557757,
+                            43.0491562436159
+                        ],
+                        [
+                            -77.659440187045,
+                            43.0489622105173
+                        ],
+                        [
+                            -77.6593059687065,
+                            43.0489472848692
+                        ],
+                        [
+                            -77.6593730778757,
+                            43.048514439486
+                        ],
+                        [
+                            -77.6596152544435,
+                            43.0485357619903
+                        ],
+                        [
+                            -77.6595364741142,
+                            43.0489750039273
+                        ],
+                        [
+                            -77.6597786506825,
+                            43.0489920618035
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}
