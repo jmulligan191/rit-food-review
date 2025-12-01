@@ -116,7 +116,16 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "grill",
+            "pizza",
+            "sushi",
+            "asian",
+            "chinese",
+            "rotating chef",
+            "daily chef specials",
+            "vegan options"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Crossroads_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/crossroads_logo.png", // slug
