@@ -33,7 +33,7 @@ def _svg_placeholder(width: int = 600, height: int = 200, text: str = "No image"
     return 'data:image/svg+xml;base64,' + base64.b64encode(b).decode('ascii')
 
 
-def build_banner_html(item: dict, media_prefix: str = "") -> str:
+def build_banner_html(item: dict, media_prefix: str = "", placeholder_if_missing: bool = True) -> str:
     """Build banner HTML, prefixing local media paths with `media_prefix`.
 
     `item` may contain `local_banner_path` (a local path like
@@ -43,10 +43,19 @@ def build_banner_html(item: dict, media_prefix: str = "") -> str:
     """
     banner = choose_image(item, "local_banner_path", "remote_banner_url")
     if not banner:
-        # return a lightweight inline SVG placeholder so pages without banners still look intentional
+        if not placeholder_if_missing:
+            return ""
+        # return a lightweight inline SVG placeholder so restaurant pages without banners still look intentional
         placeholder = _svg_placeholder(1200, 300, 'No banner available')
-        return f'<div class="banner"><img src="{placeholder}" alt="{item.get("name","")} banner" class="img-fluid w-100 banner-img"/></div>'
+        return f'<div class="banner"><img src="{placeholder}" alt="{item.get("name","") } banner" class="img-fluid w-100 banner-img"/></div>'
+    # if banner looks local (not http///) verify the file exists on disk; if it doesn't, treat as missing
     if not (banner.startswith("http") or banner.startswith("//")):
+        # banner path is expected relative to repo root (e.g. media/images/...)
+        if not Path(banner).exists():
+            if not placeholder_if_missing:
+                return ""
+            placeholder = _svg_placeholder(1200, 300, 'No banner available')
+            return f'<div class="banner"><img src="{placeholder}" alt="{item.get("name","") } banner" class="img-fluid w-100 banner-img"/></div>'
         banner = f"{media_prefix}{banner}"
     return f'<div class="banner"><img src="{banner}" alt="{item.get("name","")} banner" class="img-fluid w-100 banner-img"/></div>'
 
@@ -197,6 +206,10 @@ def main():
 
         banner_html = build_banner_html(item, media_prefix)
         logo_url = choose_image(item, "local_logo_path", "remote_logo_url") or ""
+        # if logo_url is local, verify file exists; if missing, clear so template will use placeholder
+        if logo_url and not (logo_url.startswith('http') or logo_url.startswith('//')):
+            if not Path(logo_url).exists():
+                logo_url = ""
         # ensure payment_methods is a dict for template convenience (list -> dict of true)
         pm = item.get('payment_methods')
         if isinstance(pm, list):
@@ -311,7 +324,7 @@ def main():
         # directly (no "../" prefix).
         homepage_media_prefix = ""
         homepage_site_prefix = ""
-        homepage_banner = build_banner_html(homepage, homepage_media_prefix)
+        homepage_banner = build_banner_html(homepage, homepage_media_prefix, placeholder_if_missing=False)
         homepage_logo = choose_image(homepage, "local_logo_path", "remote_logo_url") or ""
         homepage_rendered = skeleton.render(item=homepage, page_title=homepage.get("title") or homepage.get("name"), banner_html=homepage_banner, logo_url=homepage_logo, extra_content=homepage.get("extra_content",""), media_prefix=homepage_media_prefix, site_prefix=homepage_site_prefix)
         homepage_file = outdir / "index.html"

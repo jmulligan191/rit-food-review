@@ -128,6 +128,18 @@
             </div>
             <div class="col-md-4">
                 <h4>Meta</h4>
+                {% if item.payment_methods %}
+                <p><strong>Payment:</strong>
+                    {% for method, ok in item.payment_methods.items() %}
+                        {% set pretty = method|replace('_', ' ')|title|replace('Rit', 'RIT') %}
+                        {% if ok %}
+                            <span class="badge bg-success text-white">{{ pretty }}</span>
+                        {% else %}
+                            <span class="badge bg-danger text-white">{{ pretty }}</span>
+                        {% endif %}
+                    {% endfor %}
+                </p>
+                {% endif %}
                 {% if item.created_at %}
                 <p><strong>Created:</strong> <time class="js-local-time" datetime="{{ item.created_at }}"
                         data-epoch="{{ item.created_at_epoch_ms|default('') }}">{{ item.created_at }}</time></p>
@@ -141,17 +153,6 @@
                 {% endif %}
                 {% if item.edited_by %}
                 <p><strong>Edited by:</strong> {{ item.edited_by | join(', ') }}</p>
-                {% endif %}
-                {% if item.payment_methods %}
-                <p><strong>Payment:</strong>
-                    {% for method, ok in item.payment_methods.items() %}
-                        {% if ok %}
-                            <span class="badge bg-success text-white">{{ method }}</span>
-                        {% else %}
-                            <span class="badge bg-danger text-white">{{ method }}</span>
-                        {% endif %}
-                    {% endfor %}
-                </p>
                 {% endif %}
                 {% if item.tags and item.tags|length > 0 %}
                 <p><strong>Tags:</strong>
