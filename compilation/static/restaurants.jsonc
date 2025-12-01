@@ -935,7 +935,13 @@
             "rit_mobile_pay": true
         },
         
-        "tags": [],
+        "tags": [
+            "restaurant",
+            "all-day breakfast",
+            "american fare",
+            "build-your-own pasta",
+            "dinner"
+        ],
 
         "menus": { // Petals has a page/PDF for menus, other dining places use FD Meal Planner for their menu
             "breakfast": "https://www.rit.edu/ritinn/sites/rit.edu.ritinn/files/documents/Breakfast%20Menu%20for%20Website.pdf",
