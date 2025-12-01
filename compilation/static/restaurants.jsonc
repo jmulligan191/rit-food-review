@@ -41,6 +41,8 @@
             "rit_mobile_pay": true
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Gracies_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/gracies_logo.png", // slug
 
@@ -87,6 +89,8 @@
             "rit_mobile_pay": true
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Crossroads_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/crossroads_logo.png", // slug
 
@@ -131,6 +135,8 @@
             "rit_mobile_pay": true
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Cantina%20and%20Grille_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/cantina_logo.png", // slug
 
@@ -173,6 +179,8 @@
             "rit_mobile_pay": true
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2025-06/RITZ_LogoBlack.png",
         "local_logo_path": "media/images/restauraunts/ritz_logo.png", // slug
 
@@ -215,6 +223,8 @@
             "rit_mobile_pay": true
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Brick%20City_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/brick_city_logo.png", // slug
 
@@ -258,6 +268,8 @@
             "rit_mobile_pay": true
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Nathans_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/nathans_logo.png", // slug
 
@@ -301,6 +313,8 @@
             "rit_mobile_pay": true
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Loaded%20Latke_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/loaded_latke_logo.png", // slug
 
@@ -333,6 +347,8 @@
             "email": null
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Midnight%20Oil_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/midnight_oil_logo.png", // slug
 
@@ -387,6 +403,8 @@
             "rit_mobile_pay": true
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_College%20Grind_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/college_grind_logo.png", // slug
 
@@ -430,6 +448,8 @@
             "rit_mobile_pay": true
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Ben_and_Jerrys_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/ben_and_jerrys_logo.png", // slug
 
@@ -473,6 +493,8 @@
             "rit_mobile_pay": true
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Commons_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/commons_logo.png", // slug
 
@@ -516,6 +538,8 @@
             "rit_mobile_pay": true
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Beanz_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/beanz_logo.png", // slug
 
@@ -560,6 +584,8 @@
             "rit_mobile_pay": true
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Artesano_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/artesanos_logo.png", // slug
 
@@ -604,6 +630,8 @@
             "rit_mobile_pay": true
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_CtrlAltDeli_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/ctrl_alt_deli_logo.png", // slug
 
@@ -666,6 +694,8 @@
             "dinner": "https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:e07037da-2233-4ee2-b855-a6ea9b0ad33f" // same as lunch
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Petals_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/petals_logo.png", // slug
 
@@ -718,6 +748,8 @@
             "drinks": "https://www.rit.edu/ritinn/sites/rit.edu.ritinn/files/documents/rit-inn-drinks-menu.pdf"
         },
 
+        "tags": [],
+        
         "remote_logo_url": null, // can't find a logo for this place
         "local_logo_path": "media/images/restauraunts/charades_logo.png", // slug
         
@@ -762,6 +794,8 @@
         },
 
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Javas_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/javas_logo.png", // slug
 
@@ -805,6 +839,8 @@
             "rit_mobile_pay": true
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Bytes_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/bytes_logo.png", // slug
 
@@ -837,6 +873,8 @@
             "email": null
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_The%20Corner%20Store_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/corner_store_logo.png", // slug
 
@@ -870,6 +908,8 @@
             "email": null
         },
 
+        "tags": [],
+        
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_The%20Market_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/global_market_logo.png", // slug
 
