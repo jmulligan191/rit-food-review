@@ -12,11 +12,7 @@
         "description": "RIT's largest dining hall, Gracie's offers an all-you-care-to-eat buffet with rotating international dishes, brick-oven pizza, and allergen-friendly stations. It's nut-free (except coconut) and caters to vegan and gluten-free diets.",
 
         "hours": {
-            "monday": "7:00AM-7:30PM",
-            "tuesday": "7:00AM-7:30PM",
-            "wednesday": "7:00AM-7:30PM",
-            "thursday": "7:00AM-7:30PM",
-            "friday": "7:00AM-7:30PM",
+            "weekdays": "7:00AM-7:30PM",
             "saturday": "8:00AM-7:00PM",
             "sunday": "11:00AM-7:00PM"
         },
@@ -52,10 +48,7 @@
         "description": "A market-style food court in Global Village with stations for sushi, pizza, subs, Asian cuisine, and daily chef specials. It's a popular lunch and dinner spot with grab-and-go options.",
 
         "hours": {
-            "monday": "10:30AM-8:00PM",
-            "tuesday": "10:30AM-9:00PM",
-            "wednesday": "10:30AM-9:00PM",
-            "thursday": "10:30AM-9:00PM",
+            "weekdays": "10:30AM-9:00PM",
             "friday": "10:30AM-6:00PM",
             "saturday": null,
             "sunday": "12:00PM-8:00PM"
@@ -92,10 +85,7 @@
         "description": "Located in Global Village, Cantina serves made-to-order Mexican fare like tacos and burritos, plus rotating international options from Mediterranean to Indian. It’s a flavorful, fast-casual experience.",
 
         "hours": {
-            "monday": "11:00AM-9:00PM",
-            "tuesday": "11:00AM-9:00PM",
-            "wednesday": "11:00AM-9:00PM",
-            "thursday": "11:00AM-9:00PM",
+            "weekdays": "11:00AM-9:00PM",
             "friday": "11:00AM-8:00PM",
             "saturday": "12:00PM-8:00PM",
             "sunday": null
@@ -130,13 +120,8 @@
         "description": "A spirited campus eatery known for its paninis, pasta bakes, and signature Munson sandwich. RITZ is a go-to for subs, pizza, and grab-and-go meals with a side of Tiger pride.",
 
         "hours": {
-            "monday": "10:00AM-6:00PM",
-            "tuesday": "10:00AM-6:00PM",
-            "wednesday": "10:00AM-6:00PM",
-            "thursday": "10:00AM-6:00PM",
-            "friday": "10:00AM-6:00PM",
-            "saturday": null,
-            "sunday": null
+            "weekdays": "10:00AM-6:00PM",
+            "weekends": null
         },
 
         "contact": {
@@ -168,13 +153,8 @@
         "description": "A breakfast and lunch café offering build-your-own sandwiches, salads, and vegan grill specials. Known for its coffee and quick service, it’s a favorite for early risers and midday bites.",
 
         "hours": {
-            "monday": "7:00AM-2:00PM",
-            "tuesday": "7:00AM-2:00PM",
-            "wednesday": "7:00AM-2:00PM",
-            "thursday": "7:00AM-2:00PM",
-            "friday": "7:00AM-2:00PM",
-            "saturday": null,
-            "sunday": null
+            "weekdays": "7:00AM-2:00PM",
+            "weekends": null
         },
 
         "contact": {
@@ -206,10 +186,7 @@
         "description": "A local favorite since 1980, Nathan's serves hearty soups, fresh sandwiches, and baked breads. Founded by an RIT alum, it's a comforting, home-style option with a loyal following.",
 
         "hours": {
-            "monday": "10:00AM-6:00PM",
-            "tuesday": "10:00AM-6:00PM",
-            "wednesday": "10:00AM-6:00PM",
-            "thursday": "10:00AM-6:00PM",
+            "weekdays": "10:00AM-6:00PM",
             "friday": "10:00AM-5:00PM",
             "saturday": "11:00AM-2:00PM",
             "sunday": null
@@ -244,13 +221,9 @@
         "description": "We are a certified Kosher deli under the supervision of STAR-K Kosher Certification. We serve traditional hand-crafted sandwiches with premium meats, house-made bagel chips, matzo ball soup, potato salad, latkes, pickles, and Dr. Brown's beverages.",
 
         "hours": {
-            "monday": "11:00AM-2:00PM",
-            "tuesday": "11:00AM-2:00PM",
-            "wednesday": "11:00AM-2:00PM",
-            "thursday": "11:00AM-2:00PM",
+            "weekdays": "11:00AM-2:00PM",
             "friday": null,
-            "saturday": null,
-            "sunday": null
+            "weekends": null
         },
 
         "contact": {
@@ -283,13 +256,8 @@
         "description": "We serve Starbucks® coffee and nestled in Global Village. We serve coffee, specialty drinks, artisan sandwiches, desserts, and pastries. We feature student-crafted beverages throughout the semester.",
 
         "hours": {
-            "monday": "7:30AM-11:00PM",
-            "tuesday": "7:30AM-11:00PM",
-            "wednesday": "7:30AM-11:00PM",
-            "thursday": "7:30AM-11:00PM",
-            "friday": "7:30AM-11:00PM",
-            "saturday": "10:00AM-10:00PM",
-            "sunday": "10:00AM-10:00PM"
+            "weekdays": "7:30AM-11:00PM",
+            "weekends": "10:00AM-10:00PM"
         },
 
         "contact": {
@@ -322,13 +290,8 @@
         "description": "We offer hot and cold Starbucks® beverages, pastries, breakfast sandwiches, and desserts near NTID. Stop by for smoothies made from whole fruits and vegetables and cold-pressed juices from Red Jacket Orchards, a local orchard. Orders are placed from a kiosk.",
 
         "hours": {
-            "monday": "7:30AM-4:00PM",
-            "tuesday": "7:30AM-4:00PM",
-            "wednesday": "7:30AM-4:00PM",
-            "thursday": "7:30AM-4:00PM",
-            "friday": "7:30AM-4:00PM",
-            "saturday": "9:00AM-2:00PM",
-            "sunday": "9:00AM-2:00PM"
+            "weekdays": "7:30AM-4:00PM",
+            "weekends": "9:00AM-2:00PM"
         },
 
         "contact": {
@@ -361,13 +324,8 @@
         "description": "We offer over 20 flavors of Vermont's best ice cream. In 1978, Ben & Jerry's first served ice cream in downtown Burlington, VT. Friends hung out at the scoop shop, and good vibes flowed over euphoric flavors. This still holds true right in the heart of the RIT campus. We serve dairy and non-dairy ice creams, sorbet, slushies, shakes, sundaes, and cookies.",
 
         "hours": {
-            "monday": "12:00PM-7:00PM",
-            "tuesday": "12:00PM-7:00PM",
-            "wednesday": "12:00PM-7:00PM",
-            "thursday": "12:00PM-7:00PM",
-            "friday": "12:00PM-7:00PM",
-            "saturday": null,
-            "sunday": null
+            "weekdays": "12:00PM-7:00PM",
+            "weekends": null
         },
 
         "contact": {
@@ -400,13 +358,8 @@
         "description": "From lunch on the go to late-night bites, Commons makes it easy to get what you’re craving. Order through the kiosks or online and enjoy classics like hot pizzas, fresh salads, deli subs, and gourmet sandwiches—ready when you are.",
 
         "hours": {
-            "monday": "2:00PM-11:00PM",
-            "tuesday": "2:00PM-11:00PM",
-            "wednesday": "2:00PM-11:00PM",
-            "thursday": "2:00PM-11:00PM",
-            "friday": "2:00PM-11:00PM",
-            "saturday": "2:00PM-10:00PM",
-            "sunday": "2:00PM-10:00PM"
+            "weekdays": "2:00PM-11:00PM",
+            "weekends": "2:00PM-10:00PM"
         },
 
         "contact": {
@@ -439,13 +392,8 @@
         "description": "We serve local Finger Lakes Coffee Roasters®  drinks, milkshakes, and seasonal specialty drinks, along with freshly baked goods, desserts, sandwiches, and smoothies blended with whole fruits, vegetables, and cold-pressed apple juice from a local orchard, Red Jacket Orchards. We also serve our own Tiger Blend coffee using fair trade Bolivian dark roast coffee.",
 
         "hours": {
-            "monday": "7:30AM-10:00PM",
-            "tuesday": "7:30AM-10:00PM",
-            "wednesday": "7:30AM-10:00PM",
-            "thursday": "7:30AM-10:00PM",
-            "friday": "7:30AM-10:00PM",
-            "saturday": "9:00AM-10:00PM",
-            "sunday": "9:00AM-10:00PM"
+            "weekdays": "7:30AM-10:00PM",
+            "weekends": "9:00AM-10:00PM"
         },
 
         "contact": {
@@ -478,11 +426,7 @@
         "description": "We are a patisserie offering a wide selection of upscale delicacies, including in-house created desserts, breakfast pastries, sandwiches, cookies, tarts, and gluten-free and vegan options. We serve blended frozen drinks, espressos, lattes, and cappuccinos from Peet's Coffee®.",
 
         "hours": {
-            "monday": "7:30AM-7:00PM",
-            "tuesday": "7:30AM-7:00PM",
-            "wednesday": "7:30AM-7:00PM",
-            "thursday": "7:30AM-7:00PM",
-            "friday": "7:30AM-7:00PM",
+            "weekdays": "7:30AM-7:00PM",
             "saturday": null,
             "sunday": "9:00AM-3:00PM"
         },
@@ -517,13 +461,9 @@
         "description": "Take control and design your hot or cold sandwich, pizza, panini, or wrap. We offer breakfast sandwiches and grab-and-go options, including bagels, baked goods, pastries, fresh fruit, and salads.",
 
         "hours": {
-            "monday": "7:30AM-5:00PM",
-            "tuesday": "7:30AM-5:00PM",
-            "wednesday": "7:30AM-5:00PM",
-            "thursday": "7:30AM-5:00PM",
+            "weekdays": "7:30AM-5:00PM",
             "friday": "7:30AM-2:00PM",
-            "saturday": null,
-            "sunday": null
+            "weekends": null
         },
 
         "contact": {
@@ -556,13 +496,8 @@
         "description": "We offer traditional American fare with daily breakfast, lunch, and dinner specials. We are located inside the RIT Inn and Conference Center.",
 
         "hours": {
-            "monday": "6:30AM-10:30PM",
-            "tuesday": "6:30AM-10:30PM",
-            "wednesday": "6:30AM-10:30PM",
-            "thursday": "6:30AM-10:30PM",
-            "friday": "6:30AM-10:30PM",
-            "saturday": "7:00AM-10:30PM",
-            "sunday": "7:00AM-10:30PM"
+            "weekdays": "6:30AM-10:30PM",
+            "weekends": "7:00AM-10:30PM"
         },
 
         "contact": {
@@ -595,11 +530,7 @@
         "description": "We serve fresh, locally roasted coffee, organic teas, light snacks, and gluten-free and vegan options in a casual and comfortable atmosphere. We have a partnership with Java's on Gibbs Street in downtown Rochester.",
 
         "hours": {
-            "monday": "7:30AM-7:00PM",
-            "tuesday": "7:30AM-7:00PM",
-            "wednesday": "7:30AM-7:00PM",
-            "thursday": "7:30AM-7:00PM",
-            "friday": "7:30AM-7:00PM",
+            "weekdays": "7:30AM-7:00PM",
             "saturday": "9:00AM-3:00PM",
             "sunday": null
         },
@@ -635,13 +566,7 @@
         "description": "We are a 24-hour self-service and self-checkout micromarket that offers a variety of food options, including beverages, signature sandwiches, salads, snacks, and microwavable entrées. We have multiple locations around campus. We partner with AVI, Foodsystems to bring an inviting atmosphere with endless choices, convenient shopping, and secure technology.",
 
         "hours": {
-            "monday": "12:00AM-11:59PM",
-            "tuesday": "12:00AM-11:59PM",
-            "wednesday": "12:00AM-11:59PM",
-            "thursday": "12:00AM-11:59PM",
-            "friday": "12:00AM-11:59PM",
-            "saturday": "12:00AM-11:59PM",
-            "sunday": "12:00AM-11:59PM"
+            "everyday": "24/7"
         },
 
         "contact": {
@@ -674,13 +599,8 @@
         "description": "We are a small grocery store open late and conveniently located in the tunnels of the residence halls. We carry groceries, fresh produce, microwavable entrées, dairy products, snacks, toiletries, school supplies, grab-and-go sandwiches, ice cream, and beverages.",
 
         "hours": {
-            "monday": "8:30AM-11:59PM",
-            "tuesday": "8:30AM-11:59PM",
-            "wednesday": "8:30AM-11:59PM",
-            "thursday": "8:30AM-11:59PM",
-            "friday": "8:30AM-11:59PM",
-            "saturday": "10:00AM-11:59PM",
-            "sunday": "10:00AM-11:59PM"
+            "weekdays": "8:30AM-11:59PM",
+            "weekends": "10:00AM-11:59PM"
         },
 
         "contact": {
@@ -711,13 +631,9 @@
         "description": "We are a destination for groceries, produce, toiletries, and beverages. We also have an array of international ingredients, seasonings, snacks, and candy. Our international selection changes often, so visit frequently to see what's new.",
 
         "hours": {
-            "monday": "8:00AM-10:00PM",
-            "tuesday": "8:00AM-10:00PM",
-            "wednesday": "8:00AM-10:00PM",
-            "thursday": "8:00AM-10:00PM",
+            "weekdays": "8:00AM-10:00PM",
             "friday": "8:00AM-8:00PM",
-            "saturday": "10:00AM-8:00PM",
-            "sunday": "10:00AM-8:00PM"
+            "weekends": "10:00AM-8:00PM"
         },
 
         "contact": {
