@@ -1011,7 +1011,13 @@
             "drinks": "https://www.rit.edu/ritinn/sites/rit.edu.ritinn/files/documents/rit-inn-drinks-menu.pdf"
         },
         
-        "tags": [],
+        "tags": [
+            "lobby bar",
+            "full service restaurant",
+            "cocktails",
+            "appetizers",
+            "dinner"
+        ],
 
         "remote_logo_url": null, // can't find a logo for this place
         "local_logo_path": "media/images/restauraunts/charades_logo.png", // slug
