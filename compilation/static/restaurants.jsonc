@@ -734,7 +734,14 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "coffee",
+            "finger-lakes coffee",
+            "milkshakes",
+            "sandwiches",
+            "baked goods",
+            "smoothies"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Beanz_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/beanz_logo.png", // slug
