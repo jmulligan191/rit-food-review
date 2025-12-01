@@ -129,6 +129,42 @@ def main():
 
         _attach_epoch('created_at')
         _attach_epoch('updated_at')
+        # normalize hours: support wildcard keys like `everyday`, `weekdays`, `weekends`.
+        # priority ordering: explicit day key (if present) -> weekday/weekend wildcard -> everyday wildcard -> None
+        raw_hours = item.get('hours') or {}
+        if isinstance(raw_hours, dict):
+            days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
+            effective = {}
+            for d in days:
+                if d in raw_hours:
+                    # explicit day provided (may be None meaning closed)
+                    val = raw_hours.get(d)
+                else:
+                    # fallback to weekdays/weekends/everyday
+                    if d in ('monday','tuesday','wednesday','thursday','friday') and ('weekdays' in raw_hours):
+                        val = raw_hours.get('weekdays')
+                    elif d in ('saturday','sunday') and ('weekends' in raw_hours):
+                        val = raw_hours.get('weekends')
+                    elif 'everyday' in raw_hours:
+                        val = raw_hours.get('everyday')
+                    else:
+                        val = raw_hours.get(d)
+
+                # normalize common representations of a full-day / 24-7 schedule
+                if isinstance(val, str) and val:
+                    v = val.strip().lower()
+                    # treat various common synonyms as 24/7
+                    if (v in ('24/7', '24-7', '247', '24h', '24 hours', 'open 24/7', 'open 24 hours', 'always', 'all day')
+                        or v == '12:00am-11:59pm' or v == '12:00 am - 11:59 pm' or v == '12:00am - 11:59pm'):
+                        effective[d] = 'Open 24/7'
+                    else:
+                        effective[d] = val
+                else:
+                    # preserve None or other non-string markers (closed)
+                    effective[d] = val
+
+            # replace item.hours with the expanded mapping so templates can continue to use item.hours.get(day)
+            item['hours'] = effective
         filename = rest_out / f"{slug}.html"
         # compute a media prefix so local media paths resolve correctly from the
         # rendered page's directory to the output `media/` folder.
