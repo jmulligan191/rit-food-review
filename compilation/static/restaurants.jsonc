@@ -243,7 +243,13 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "grill",
+            "pizza",
+            "pasta",
+            "paninis",
+            "grab-and-go"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2025-06/RITZ_LogoBlack.png",
         "local_logo_path": "media/images/restauraunts/ritz_logo.png", // slug
