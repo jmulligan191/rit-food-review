@@ -22,13 +22,32 @@ def choose_image(item: dict, local_key: str, remote_key: str) -> str:
     local = item.get(local_key)
     remote = item.get(remote_key)
     if local:
-        return local
+        # if the local value looks like an absolute/remote path or data URI, accept it
+        if isinstance(local, str) and (local.startswith('http') or local.startswith('//') or local.startswith('data:')):
+            return local
+        # if local file exists on disk, return it
+        try:
+            if Path(local).exists():
+                return local
+        except Exception:
+            pass
+        # otherwise fall back to remote if available
+        return remote or ""
     return remote or ""
 
 
 def _svg_placeholder(width: int = 600, height: int = 200, text: str = "No image") -> str:
     """Return a base64 data URI of a simple SVG placeholder with centered text."""
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}"><rect width="100%" height="100%" fill="#e9ecef"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6c757d" font-family="Arial, Helvetica, sans-serif" font-size="24">{text}</text></svg>'''
+    b = svg.encode('utf-8')
+    return 'data:image/svg+xml;base64,' + base64.b64encode(b).decode('ascii')
+
+
+def _svg_question_placeholder(width: int = 1200, height: int = 300) -> str:
+    """Return a base64 data URI of a banner-sized SVG placeholder with a large question mark."""
+    # large font size relative to the height
+    font_size = max(48, int(height * 0.6))
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}"><rect width="100%" height="100%" fill="#f8f9fa" rx="6" ry="6"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6c757d" font-family="Arial, Helvetica, sans-serif" font-size="{font_size}">?</text></svg>'''
     b = svg.encode('utf-8')
     return 'data:image/svg+xml;base64,' + base64.b64encode(b).decode('ascii')
 
@@ -45,8 +64,8 @@ def build_banner_html(item: dict, media_prefix: str = "", placeholder_if_missing
     if not banner:
         if not placeholder_if_missing:
             return ""
-        # return a lightweight inline SVG placeholder so restaurant pages without banners still look intentional
-        placeholder = _svg_placeholder(1200, 300, 'No banner available')
+        # return a question-mark banner so missing banners take the same visual space
+        placeholder = _svg_question_placeholder(1200, 300)
         return f'<div class="banner"><img src="{placeholder}" alt="{item.get("name","") } banner" class="img-fluid w-100 banner-img"/></div>'
     # if banner looks local (not http///) verify the file exists on disk; if it doesn't, treat as missing
     if not (banner.startswith("http") or banner.startswith("//")):
@@ -54,7 +73,7 @@ def build_banner_html(item: dict, media_prefix: str = "", placeholder_if_missing
         if not Path(banner).exists():
             if not placeholder_if_missing:
                 return ""
-            placeholder = _svg_placeholder(1200, 300, 'No banner available')
+            placeholder = _svg_question_placeholder(1200, 300)
             return f'<div class="banner"><img src="{placeholder}" alt="{item.get("name","") } banner" class="img-fluid w-100 banner-img"/></div>'
         banner = f"{media_prefix}{banner}"
     return f'<div class="banner"><img src="{banner}" alt="{item.get("name","")} banner" class="img-fluid w-100 banner-img"/></div>'
@@ -107,7 +126,7 @@ def main():
     # future proofing this so we can have more templates later
     templates = {
         "skeleton": template_path.name,
-        "restaurant": (template_path.parent / 'skeleton-resturaunts.html').name,
+        "restaurant": (template_path.parent / 'skeleton-restauraunts.html').name,
     }
 
     # Create a Jinja environment with a FileSystemLoader pointed at the templates folder
@@ -270,11 +289,24 @@ def main():
         print(f"Wrote {filename}")
 
         # build card HTML for index
+        # choose a banner for the index card first, fallback to logo, otherwise use placeholders
+        raw_banner = choose_image(item, "local_banner_path", "remote_banner_url") or ""
+        # validate local banner existence
+        if raw_banner and not (raw_banner.startswith('http') or raw_banner.startswith('//') or raw_banner.startswith('data:')):
+            if not Path(raw_banner).exists():
+                raw_banner = ''
+
+        card_banner = raw_banner or _svg_question_placeholder(800, 200)
+
+        # choose a logo fallback
+        card_logo = logo_url or item.get("local_logo_path") or item.get("remote_logo_url") or logo_placeholder
+
         card = {
             "name": item.get("name","Unnamed"),
             "description": item.get("description",""),
             "slug": slug,
-            "logo": logo_url or item.get("local_logo_path") or item.get("remote_logo_url") or "",
+            "banner": card_banner,
+            "logo": card_logo,
         }
         cards.append(card)
 
@@ -288,11 +320,13 @@ def main():
     index_media_prefix = cards_media_prefix
     index_site_prefix = index_media_prefix
     for c in cards:
-        if c["logo"]:
-            if c["logo"].startswith("http") or c["logo"].startswith("//"):
-                img = f'<img src="{c["logo"]}" class="card-img-top card-media-img" alt="{c["name"]} logo">'
+        # prefer banner as the prominent card image; fall back to logo
+        media_src = c.get("banner") or c.get("logo") or ""
+        if media_src:
+            if media_src.startswith("http") or media_src.startswith("//") or media_src.startswith("data:"):
+                img = f'<img src="{media_src}" class="card-img-top card-media-img" alt="{c["name"]} image">'
             else:
-                img = f'<img src="{cards_media_prefix}{c["logo"]}" class="card-img-top card-media-img" alt="{c["name"]} logo">'
+                img = f'<img src="{cards_media_prefix}{media_src}" class="card-img-top card-media-img" alt="{c["name"]} image">'
         else:
             img = ""
         card_html = f'''<div class="col-md-4 mb-4"><div class="card h-100">{img}<div class="card-body"><h5 class="card-title">{c["name"]}</h5><p class="card-text">{c["description"]}</p><a href="./{c["slug"]}.html" class="stretched-link">View</a></div></div></div>'''
