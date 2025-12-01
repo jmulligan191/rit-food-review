@@ -426,7 +426,14 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "kosher",
+            "deli",
+            "latkes",
+            "hand-crafted sandwiches",
+            "matzo ball soup",
+            "rotating sides"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Loaded%20Latke_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/loaded_latke_logo.png", // slug
