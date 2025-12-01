@@ -45,7 +45,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -102,7 +103,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -157,7 +159,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -210,7 +213,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -263,7 +267,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -317,7 +322,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -371,7 +377,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -425,7 +432,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -479,7 +487,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -533,7 +542,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -587,7 +597,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -641,7 +652,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -696,7 +708,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -751,7 +764,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -818,7 +832,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -881,11 +896,12 @@
         "uses_fd_meal_planner": false,
 
         "payment_methods": {
-            "dining_dollars": true,
-            "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "dining_dollars": false,
+            "tiger_bucks": false,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
-            "rit_mobile_pay": true
+            "rit_mobile_pay": false
         },
 
         "menus": {
@@ -941,7 +957,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
@@ -995,7 +1012,8 @@
         "payment_methods": {
             "dining_dollars": true,
             "tiger_bucks": true,
-            "credit_debit_cards": true,
+            "credit_card": true,
+            "debit_card": true,
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
