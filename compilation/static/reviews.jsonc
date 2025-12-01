@@ -1,6 +1,6 @@
 {
-    "gracies": [ // resturaunt slug, make sure this matches the one in restaurants.jsonc
-        // put all the reviews for this resturaunt inside the [] array
+    "gracies": [ // restauraunt slug, make sure this matches the one in restaurants.jsonc
+        // put all the reviews for this restauraunt inside the [] array
         {
             "author": "John Doe", // name of the reviewer
             "author_image_url": null, // optional URL to the reviewer"s profile image
