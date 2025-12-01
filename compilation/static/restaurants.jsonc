@@ -7,14 +7,20 @@
 {
     "gracies": {
         "slug": "gracies",
-        "name": "Gracies",
         "website_slug": "gracies-dining-hall",
+
+        "name": "Gracies",
         "description": "RIT's largest dining hall, Gracie's offers an all-you-care-to-eat buffet with rotating international dishes, brick-oven pizza, and allergen-friendly stations. It's nut-free (except coconut) and caters to vegan and gluten-free diets.",
 
         "hours": {
-            "weekdays": "7:00AM-7:30PM",
-            "saturday": "8:00AM-7:00PM",
-            "sunday": "11:00AM-7:00PM"
+            "weekdays": [
+                "7:30AM-2:00PM",
+                "4:00PM-9:00PM"
+            ],
+            "weekends": [
+                "10:00AM-2:00PM",
+                "4:00PM-8:00PM"
+            ]
         },
 
         "contact": {
@@ -25,6 +31,15 @@
         },
 
         "online_ordering_id": null,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Gracies_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/gracies_logo.png", // slug
@@ -62,6 +77,15 @@
         },
 
         "online_ordering_id": 7,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Crossroads_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/crossroads_logo.png", // slug
@@ -97,6 +121,15 @@
         },
 
         "online_ordering_id": 8,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Cantina%20and%20Grille_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/cantina_logo.png", // slug
@@ -130,6 +163,15 @@
         },
 
         "online_ordering_id": 9,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2025-06/RITZ_LogoBlack.png",
         "local_logo_path": "media/images/restauraunts/ritz_logo.png", // slug
@@ -163,6 +205,15 @@
         },
 
         "online_ordering_id": null,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Brick%20City_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/brick_city_logo.png", // slug
@@ -193,11 +244,19 @@
         },
 
         "contact": {
-            "phone": "(585) 424-4551",
-            "email": null
+            "phone": "(585) 424-4551"
         },
 
         "online_ordering_id": 10,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Nathans_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/nathans_logo.png", // slug
@@ -232,6 +291,15 @@
         },
 
         "online_ordering_id": null,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Loaded%20Latke_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/loaded_latke_logo.png", // slug
@@ -269,6 +337,15 @@
         "local_logo_path": "media/images/restauraunts/midnight_oil_logo.png", // slug
 
         "online_ordering_id": 4,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_midnightoil.jpg",
         "local_banner_path": "media/images/restauraunts/midnight_oil_banner.jpg",
@@ -300,6 +377,15 @@
         },
 
         "online_ordering_id": 5,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_College%20Grind_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/college_grind_logo.png", // slug
@@ -334,6 +420,15 @@
         },
 
         "online_ordering_id": null,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Ben_and_Jerrys_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/ben_and_jerrys_logo.png", // slug
@@ -368,6 +463,15 @@
         },
 
         "online_ordering_id": 14,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Commons_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/commons_logo.png", // slug
@@ -402,6 +506,15 @@
         },
 
         "online_ordering_id": 3,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Beanz_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/beanz_logo.png", // slug
@@ -437,6 +550,15 @@
         },
 
         "online_ordering_id": 2,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Artesano_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/artesanos_logo.png", // slug
@@ -472,6 +594,15 @@
         },
 
         "online_ordering_id": 11,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_CtrlAltDeli_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/ctrl_alt_deli_logo.png", // slug
@@ -491,7 +622,8 @@
     "petals": {
         "slug": "petals",
         "website_slug": "petals-restaurant",
-
+        "website_url": "https://www.rit.edu/ritinn/drinks-and-dining", // provided because petal's more up to date information is on the rit inn site
+ 
         "name": "Petals Restaurant",
         "description": "We offer traditional American fare with daily breakfast, lunch, and dinner specials. We are located inside the RIT Inn and Conference Center.",
 
@@ -500,12 +632,39 @@
             "weekends": "7:00AM-10:30PM"
         },
 
+        "meal_hours": {
+            "breakfast": {
+                "everyday": "6:30AM-10:30AM",
+            },
+            "lunch": {
+                "everyday": "11:30AM-2:00PM",
+            },
+            "dinner": {
+                "everyday": "4:30PM-10:00PM"
+            }
+        },
+
         "contact": {
             "phone": "(585) 359-1800",
             "email": null
         },
 
         "online_ordering_id": null,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
+        
+        "menus": { // Petals has a page/PDF for menus, other dining places use FD Meal Planner for their menu
+            "breakfast": "https://www.rit.edu/ritinn/sites/rit.edu.ritinn/files/documents/Breakfast%20Menu%20for%20Website.pdf",
+            "lunch": "https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:e07037da-2233-4ee2-b855-a6ea9b0ad33f",
+            "dinner": "https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:e07037da-2233-4ee2-b855-a6ea9b0ad33f" // same as lunch
+        },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Petals_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/petals_logo.png", // slug
@@ -520,6 +679,57 @@
         ],
         "created_at": "2025-10-31T17:22:00-04:00",
         "updated_at": "2025-11-19T15:54:00-05:00"
+    },
+
+    "charades": {
+        "slug": "charades",
+        //"website_slug": "charades", // not on rit dining site
+        "website_url": "https://www.rit.edu/ritinn/drinks-and-dining",
+
+        "name": "Charades Lobby Bar",
+        "description": "Offering an array of cocktails, wine and beer, Charades Lobby Bar is open every Wednesday, Thursday, Friday and Saturday evening. Take a seat at our signature sunken bar and relax in an atmosphere with soft lighting while you enjoy a drink or sample some of our appetizers.",
+
+        "hours": {
+            "weekdays": null, // closed monday and tuesday
+            "wednesday": "4:30PM-10:00PM",
+            "thursday": "4:30PM-10:00PM",
+            "friday": "4:30PM-10:00PM",
+            "saturday": "4:30PM-10:00PM",
+            "sunday": null
+        },
+
+        "contact": {
+            "phone": "(585) 359-1800",
+            "email": null
+        },
+
+        "online_ordering_id": null,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
+
+        "menus": {
+            "drinks": "https://www.rit.edu/ritinn/sites/rit.edu.ritinn/files/documents/rit-inn-drinks-menu.pdf"
+        },
+
+        "remote_logo_url": null, // can't find a logo for this place
+        "local_logo_path": "media/images/restauraunts/charades_logo.png", // slug
+        
+        "remote_banner_url": "https://www.rit.edu/ritinn/sites/rit.edu.ritinn/files/2024-06/charades%402x_0.jpg",
+        "local_banner_path": "media/images/restauraunts/charades_banner.jpg",
+
+        "created_by": "John Mulligan",
+        "edited_by": [
+            "John Mulligan"
+        ],
+        "created_at": "2025-12-01T12:00:00-05:00",
+        "updated_at": "2025-12-01T12:00:00-05:00"
     },
 
     "javas": {
@@ -541,6 +751,16 @@
         },
 
         "online_ordering_id": null,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
+
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Javas_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/javas_logo.png", // slug
@@ -575,6 +795,15 @@
         },
 
         "online_ordering_id": null,
+        "uses_fd_meal_planner": false,
+
+        "payment_methods": {
+            "dining_dollars": true,
+            "tiger_bucks": true,
+            "credit_debit_cards": true,
+            "mobile_payments": true,
+            "rit_mobile_pay": true
+        },
 
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Bytes_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/bytes_logo.png", // slug
