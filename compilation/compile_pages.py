@@ -10,6 +10,7 @@ import json
 from pathlib import Path
 import json5
 from datetime import datetime
+import base64
 import os
 
 def load_jsonc(path: Path):
@@ -25,6 +26,13 @@ def choose_image(item: dict, local_key: str, remote_key: str) -> str:
     return remote or ""
 
 
+def _svg_placeholder(width: int = 600, height: int = 200, text: str = "No image") -> str:
+    """Return a base64 data URI of a simple SVG placeholder with centered text."""
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}"><rect width="100%" height="100%" fill="#e9ecef"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6c757d" font-family="Arial, Helvetica, sans-serif" font-size="24">{text}</text></svg>'''
+    b = svg.encode('utf-8')
+    return 'data:image/svg+xml;base64,' + base64.b64encode(b).decode('ascii')
+
+
 def build_banner_html(item: dict, media_prefix: str = "") -> str:
     """Build banner HTML, prefixing local media paths with `media_prefix`.
 
@@ -35,7 +43,9 @@ def build_banner_html(item: dict, media_prefix: str = "") -> str:
     """
     banner = choose_image(item, "local_banner_path", "remote_banner_url")
     if not banner:
-        return ""
+        # return a lightweight inline SVG placeholder so pages without banners still look intentional
+        placeholder = _svg_placeholder(1200, 300, 'No banner available')
+        return f'<div class="banner"><img src="{placeholder}" alt="{item.get("name","")} banner" class="img-fluid w-100 banner-img"/></div>'
     if not (banner.startswith("http") or banner.startswith("//")):
         banner = f"{media_prefix}{banner}"
     return f'<div class="banner"><img src="{banner}" alt="{item.get("name","")} banner" class="img-fluid w-100 banner-img"/></div>'
@@ -151,14 +161,27 @@ def main():
                         val = raw_hours.get(d)
 
                 # normalize common representations of a full-day / 24-7 schedule
-                if isinstance(val, str) and val:
-                    v = val.strip().lower()
-                    # treat various common synonyms as 24/7
+                # and accept arrays of intervals (e.g., open in morning and evening)
+                def _normalize_interval(s):
+                    if not isinstance(s, str):
+                        return s
+                    v = s.strip().lower()
                     if (v in ('24/7', '24-7', '247', '24h', '24 hours', 'open 24/7', 'open 24 hours', 'always', 'all day')
                         or v == '12:00am-11:59pm' or v == '12:00 am - 11:59 pm' or v == '12:00am - 11:59pm'):
+                        return 'Open 24/7'
+                    return s
+
+                if isinstance(val, list):
+                    # a list of intervals — normalize each entry and collapse
+                    normalized = [_normalize_interval(x) for x in val if x is not None]
+                    # if any entry indicates 24/7, collapse to single label
+                    if any((isinstance(n, str) and n == 'Open 24/7') for n in normalized):
                         effective[d] = 'Open 24/7'
                     else:
-                        effective[d] = val
+                        effective[d] = normalized
+                elif isinstance(val, str) and val:
+                    effective_val = _normalize_interval(val)
+                    effective[d] = effective_val
                 else:
                     # preserve None or other non-string markers (closed)
                     effective[d] = val
@@ -174,6 +197,30 @@ def main():
 
         banner_html = build_banner_html(item, media_prefix)
         logo_url = choose_image(item, "local_logo_path", "remote_logo_url") or ""
+        # ensure payment_methods is a dict for template convenience (list -> dict of true)
+        pm = item.get('payment_methods')
+        if isinstance(pm, list):
+            item['payment_methods'] = {str(x): True for x in pm}
+        elif isinstance(pm, dict):
+            # leave as-is
+            pass
+        else:
+            item['payment_methods'] = {}
+
+        # normalize tags to a list
+        tags = item.get('tags')
+        if isinstance(tags, str):
+            item['tags'] = [t.strip() for t in tags.split(',') if t.strip()]
+        elif isinstance(tags, list):
+            item['tags'] = tags
+        else:
+            item['tags'] = []
+
+        # official URL preference: prefer explicit `website_url`, then `website`, then `website_slug` fallback
+        official_url = item.get('website_url') or item.get('website') or (('https://www.rit.edu/dining/location/' + item.get('website_slug')) if item.get('website_slug') else None)
+
+        # provide a small logo placeholder data-uri so templates can show an inline logo when none provided
+        logo_placeholder = _svg_placeholder(200, 200, 'No logo')
         # compute an online ordering URL if the data includes an ordering id
         ordering_id = item.get("online_ordering_id", None)
         ordering_url = None
@@ -205,7 +252,7 @@ def main():
         # use restaurant template for individual pages; pass media_prefix so
         # templates can prepend it for local media paths (e.g. "../"). Also
         # pass ordering_url (if any) so templates can show an Order Online link.
-        rendered = skeleton_restaurant.render(item=item, page_title=item.get("name"), banner_html=banner_html, logo_url=logo_url, extra_content="", media_prefix=media_prefix, site_prefix=site_prefix, ordering_url=ordering_url, reviews=reviews)
+        rendered = skeleton_restaurant.render(item=item, page_title=item.get("name"), banner_html=banner_html, logo_url=logo_url, extra_content="", media_prefix=media_prefix, site_prefix=site_prefix, ordering_url=ordering_url, reviews=reviews, official_url=official_url, logo_placeholder=logo_placeholder)
         filename.write_text(rendered, encoding="utf-8")
         print(f"Wrote {filename}")
 

@@ -64,20 +64,22 @@
                 {% endif %}
                 {% elif item.remote_logo_url %}
                 <img src="{{ item.remote_logo_url }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
+                {% else %}
+                {# no logo provided; use placeholder passed from compiler #}
+                <img src="{{ logo_placeholder }}" alt="{{ item.name }} logo" class="logo-img logo-large" />
                 {% endif %}
             </div>
             <div class="col-md-9">
                 <h1>{{ item.name|default('Unnamed Restaurant') }}</h1>
                 <p>{{ item.description|default('No description available.') }}</p>
-                {% if item.website_slug or item.website or ordering_url %}
+                {% if official_url or ordering_url %}
                 <p>
-                    {% if item.website_slug or item.website %}
-                    <a href="{{ item.website or ('https://www.rit.edu/dining/location/' + (item.website_slug or '')) }}"
-                        target="_blank" rel="noopener noreferrer">Visit official page</a>
+                    {% if official_url %}
+                    <a href="{{ official_url }}" target="_blank" rel="noopener noreferrer">Visit official page</a>
                     {% endif %}
                     {% if ordering_url %}
                     {# small separator if both links present #}
-                    {% if item.website_slug or item.website %} &nbsp;|&nbsp; {% endif %}
+                    {% if official_url %} &nbsp;|&nbsp; {% endif %}
                     <a href="{{ ordering_url }}" target="_blank" rel="noopener noreferrer">Order online</a>
                     {% endif %}
                 </p>
@@ -94,7 +96,16 @@
                         {% for day in ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'] %}
                         <tr>
                             <th style="width:35%">{{ day.capitalize() }}</th>
-                            <td>{{ item.hours.get(day) or 'Closed' }}</td>
+                            <td>
+                                {% set v = item.hours.get(day) %}
+                                {% if v is iterable and v is not string %}
+                                    {% for part in v %}
+                                        <div>{{ part }}</div>
+                                    {% endfor %}
+                                {% else %}
+                                    {{ v or 'Closed' }}
+                                {% endif %}
+                            </td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -130,6 +141,24 @@
                 {% endif %}
                 {% if item.edited_by %}
                 <p><strong>Edited by:</strong> {{ item.edited_by | join(', ') }}</p>
+                {% endif %}
+                {% if item.payment_methods %}
+                <p><strong>Payment:</strong>
+                    {% for method, ok in item.payment_methods.items() %}
+                        {% if ok %}
+                            <span class="badge bg-success text-white">{{ method }}</span>
+                        {% else %}
+                            <span class="badge bg-danger text-white">{{ method }}</span>
+                        {% endif %}
+                    {% endfor %}
+                </p>
+                {% endif %}
+                {% if item.tags and item.tags|length > 0 %}
+                <p><strong>Tags:</strong>
+                    {% for t in item.tags %}
+                        <span class="badge bg-secondary">{{ t }}</span>
+                    {% endfor %}
+                </p>
                 {% endif %}
             </div>
         </div>
