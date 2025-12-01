@@ -51,7 +51,14 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "dining hall",
+            "buffet",
+            "bbq",
+            "pizza",
+            "ice cream",
+            "vegan options"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Gracies_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/gracies_logo.png", // slug
@@ -109,7 +116,16 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "grill",
+            "pizza",
+            "sushi",
+            "asian",
+            "chinese",
+            "rotating chef",
+            "daily chef specials",
+            "vegan options"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Crossroads_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/crossroads_logo.png", // slug
@@ -165,7 +181,15 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "mexican",
+            "tacos",
+            "burritos",
+            "quesadillas",
+            "latin",
+            "rice bowls",
+            "vegan options"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Cantina%20and%20Grille_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/cantina_logo.png", // slug
@@ -219,7 +243,13 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "grill",
+            "pizza",
+            "pasta",
+            "paninis",
+            "grab-and-go"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2025-06/RITZ_LogoBlack.png",
         "local_logo_path": "media/images/restauraunts/ritz_logo.png", // slug
@@ -273,7 +303,14 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "breakfast",
+            "lunch",
+            "grill",
+            "build-your-own salads",
+            "sandwiches",
+            "vegan grill"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Brick%20City_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/brick_city_logo.png", // slug
@@ -328,7 +365,13 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "soup",
+            "salad",
+            "sandwiches",
+            "homestyle",
+            "fresh baked breads"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Nathans_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/nathans_logo.png", // slug
@@ -383,7 +426,14 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "kosher",
+            "deli",
+            "latkes",
+            "hand-crafted sandwiches",
+            "matzo ball soup",
+            "rotating sides"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Loaded%20Latke_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/loaded_latke_logo.png", // slug
@@ -438,7 +488,14 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "coffee",
+            "starbucks beverages",
+            "specialty drinks",
+            "artisan sandwiches",
+            "pastries",
+            "late night"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Midnight%20Oil_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/midnight_oil_logo.png", // slug
@@ -493,7 +550,13 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "coffee",
+            "starbucks beverages",
+            "smoothies",
+            "breakfast sandwiches",
+            "pastries"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_College%20Grind_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/college_grind_logo.png", // slug
@@ -548,7 +611,13 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "ice cream",
+            "dessert",
+            "milkshakes",
+            "cones",
+            "sundaes"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Ben_and_Jerrys_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/ben_and_jerrys_logo.png", // slug
@@ -603,7 +672,14 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "subs",
+            "sandwiches",
+            "deli",
+            "pizza",
+            "sushi",
+            "quick meals"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Commons_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/commons_logo.png", // slug
@@ -658,7 +734,14 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "coffee",
+            "finger-lakes coffee",
+            "milkshakes",
+            "sandwiches",
+            "baked goods",
+            "smoothies"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Beanz_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/beanz_logo.png", // slug
@@ -714,7 +797,14 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "bakery",
+            "pastries",
+            "sandwiches",
+            "gluten-free options",
+            "vegan options",
+            "espresso"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Artesano_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/artesanos_logo.png", // slug
@@ -770,7 +860,14 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "deli",
+            "paninis",
+            "wraps",
+            "pizza",
+            "breakfast",
+            "grab-and-go"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_CtrlAltDeli_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/ctrl_alt_deli_logo.png", // slug
@@ -838,7 +935,13 @@
             "rit_mobile_pay": true
         },
         
-        "tags": [],
+        "tags": [
+            "restaurant",
+            "all-day breakfast",
+            "american fare",
+            "build-your-own pasta",
+            "dinner"
+        ],
 
         "menus": { // Petals has a page/PDF for menus, other dining places use FD Meal Planner for their menu
             "breakfast": "https://www.rit.edu/ritinn/sites/rit.edu.ritinn/files/documents/Breakfast%20Menu%20for%20Website.pdf",
@@ -908,7 +1011,13 @@
             "drinks": "https://www.rit.edu/ritinn/sites/rit.edu.ritinn/files/documents/rit-inn-drinks-menu.pdf"
         },
         
-        "tags": [],
+        "tags": [
+            "lobby bar",
+            "full service restaurant",
+            "cocktails",
+            "appetizers",
+            "dinner"
+        ],
 
         "remote_logo_url": null, // can't find a logo for this place
         "local_logo_path": "media/images/restauraunts/charades_logo.png", // slug
@@ -963,7 +1072,12 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "coffee",
+            "bakery items",
+            "snacks",
+            "study spot"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Javas_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/javas_logo.png", // slug
@@ -1018,7 +1132,13 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "micro market",
+            "24/7 grab-and-go",
+            "snacks",
+            "drinks",
+            "toiletries"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Bytes_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/bytes_logo.png", // slug
@@ -1061,7 +1181,14 @@
             ]
         },
 
-        "tags": [],
+        "tags": [
+            "convenience store",
+            "snacks",
+            "drinks",
+            "frozen food",
+            "essentials",
+            "late night"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_The%20Corner%20Store_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/corner_store_logo.png", // slug
@@ -1105,7 +1232,14 @@
             ]
         },
 
-        "tags": [],
+        "tags": [
+            "international market",
+            "asian",
+            "rice bowls",
+            "noodles",
+            "grab-and-go",
+            "variety"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_The%20Market_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/global_market_logo.png", // slug
