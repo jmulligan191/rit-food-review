@@ -30,6 +30,15 @@
             //"website": "https://www.rit.edu/dining/gracies-dining-hall",
         },
 
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
+        },
+
         "online_ordering_id": null,
         "uses_fd_meal_planner": false,
 
@@ -78,6 +87,15 @@
             //"website": "https://www.rit.edu/dining/crossroads",
         },
 
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
+        },
+
         "online_ordering_id": 7,
         "uses_fd_meal_planner": false,
 
@@ -124,6 +142,15 @@
             "email": null
         },
 
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
+        },
+
         "online_ordering_id": 8,
         "uses_fd_meal_planner": false,
 
@@ -168,6 +195,15 @@
             "email": null
         },
 
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
+        },
+
         "online_ordering_id": 9,
         "uses_fd_meal_planner": false,
 
@@ -210,6 +246,15 @@
         "contact": {
             "phone": "(585) 475-2869",
             "email": null
+        },
+
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
         },
 
         "online_ordering_id": null,
@@ -257,6 +302,15 @@
             "phone": "(585) 424-4551"
         },
 
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
+        },
+
         "online_ordering_id": 10,
         "uses_fd_meal_planner": false,
 
@@ -300,6 +354,15 @@
         "contact": {
             "phone": "(585) 475-5000",
             "email": null
+        },
+
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
         },
 
         "online_ordering_id": null,
@@ -347,10 +410,14 @@
             "email": null
         },
 
-        "tags": [],
-        
-        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Midnight%20Oil_170x170_black.png",
-        "local_logo_path": "media/images/restauraunts/midnight_oil_logo.png", // slug
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
+        },
 
         "online_ordering_id": 4,
         "uses_fd_meal_planner": false,
@@ -362,6 +429,11 @@
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
+
+        "tags": [],
+        
+        "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Midnight%20Oil_170x170_black.png",
+        "local_logo_path": "media/images/restauraunts/midnight_oil_logo.png", // slug
 
         "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/dining_midnightoil.jpg",
         "local_banner_path": "media/images/restauraunts/midnight_oil_banner.jpg",
@@ -390,6 +462,15 @@
         "contact": {
             "phone": "(585) 475-6440",
             "email": null
+        },
+
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
         },
 
         "online_ordering_id": 5,
@@ -435,6 +516,15 @@
         "contact": {
             "phone": null,
             "email": null
+        },
+        
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
         },
 
         "online_ordering_id": null,
@@ -482,6 +572,15 @@
             "email": null
         },
 
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
+        },
+
         "online_ordering_id": 14,
         "uses_fd_meal_planner": false,
 
@@ -525,6 +624,15 @@
         "contact": {
             "phone": "(585) 475-2411",
             "email": null
+        },
+
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
         },
 
         "online_ordering_id": 3,
@@ -573,6 +681,15 @@
             "email": null
         },
 
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
+        },
+
         "online_ordering_id": 2,
         "uses_fd_meal_planner": false,
 
@@ -617,6 +734,15 @@
         "contact": {
             "phone": "(585) 475-2998",
             "email": null
+        },
+
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
         },
 
         "online_ordering_id": 11,
@@ -677,6 +803,15 @@
             "email": null
         },
 
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
+        },
+
         "online_ordering_id": null,
         "uses_fd_meal_planner": false,
 
@@ -688,13 +823,13 @@
             "rit_mobile_pay": true
         },
         
+        "tags": [],
+
         "menus": { // Petals has a page/PDF for menus, other dining places use FD Meal Planner for their menu
             "breakfast": "https://www.rit.edu/ritinn/sites/rit.edu.ritinn/files/documents/Breakfast%20Menu%20for%20Website.pdf",
             "lunch": "https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:e07037da-2233-4ee2-b855-a6ea9b0ad33f",
             "dinner": "https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:e07037da-2233-4ee2-b855-a6ea9b0ad33f" // same as lunch
         },
-
-        "tags": [],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Petals_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/petals_logo.png", // slug
@@ -733,6 +868,15 @@
             "email": null
         },
 
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
+        },
+
         "online_ordering_id": null,
         "uses_fd_meal_planner": false,
 
@@ -747,9 +891,9 @@
         "menus": {
             "drinks": "https://www.rit.edu/ritinn/sites/rit.edu.ritinn/files/documents/rit-inn-drinks-menu.pdf"
         },
-
-        "tags": [],
         
+        "tags": [],
+
         "remote_logo_url": null, // can't find a logo for this place
         "local_logo_path": "media/images/restauraunts/charades_logo.png", // slug
         
@@ -782,6 +926,15 @@
             "email": null
         },
 
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
+        },
+
         "online_ordering_id": null,
         "uses_fd_meal_planner": false,
 
@@ -792,7 +945,6 @@
             "mobile_payments": true,
             "rit_mobile_pay": true
         },
-
 
         "tags": [],
         
@@ -826,6 +978,15 @@
         "contact": {
             "phone": null,
             "email": null
+        },
+
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
         },
 
         "online_ordering_id": null,
@@ -873,6 +1034,15 @@
             "email": null
         },
 
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
+        },
+
         "tags": [],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_The%20Corner%20Store_170x170_black.png",
@@ -906,6 +1076,15 @@
         "contact": {
             "phone": "(585) 475-3454",
             "email": null
+        },
+
+        "location": {
+            "google_maps_url": null,
+            "ritmaps_mdo_id": null,
+            "coordinates": [
+                null,
+                null
+            ]
         },
 
         "tags": [],
