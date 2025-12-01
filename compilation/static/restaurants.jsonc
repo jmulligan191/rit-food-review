@@ -170,7 +170,7 @@
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Cantina%20and%20Grille_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/cantina_logo.png", // slug
 
-        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Crossroads_CROPPED.jpg",
+        "remote_banner_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/images/paragraph/banner-item-2/Hero_2160x510_Cantina_CROPPED.jpg",
         "local_banner_path": "media/images/restauraunts/cantina_banner.png",
 
         "created_by": "John Mulligan",
