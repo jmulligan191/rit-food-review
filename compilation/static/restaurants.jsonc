@@ -1072,7 +1072,12 @@
             "rit_mobile_pay": true
         },
 
-        "tags": [],
+        "tags": [
+            "coffee",
+            "bakery items",
+            "snacks",
+            "study spot"
+        ],
         
         "remote_logo_url": "https://www.rit.edu/dining/sites/rit.edu.dining/files/2024-03/Logo_Javas_170x170_black.png",
         "local_logo_path": "media/images/restauraunts/javas_logo.png", // slug
