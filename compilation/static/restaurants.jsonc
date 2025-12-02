@@ -406,11 +406,11 @@
         },
 
         "location": {
-            "google_maps_url": null,
-            "ritmaps_mdo_id": null,
+            "google_maps_url": "https://maps.app.goo.gl/R8Cy3Pny9SCj8SeN9",
+            "ritmaps_mdo_id": 2894,
             "coordinates": [
-                null,
-                null
+                43.0839097,
+                -77.6777513
             ]
         },
 
