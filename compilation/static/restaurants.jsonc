@@ -986,7 +986,7 @@
             "email": null
         },
 
-        "location": {
+        "location": { // not showing up, so skiped
             "google_maps_url": null,
             "ritmaps_mdo_id": null,
             "coordinates": [
