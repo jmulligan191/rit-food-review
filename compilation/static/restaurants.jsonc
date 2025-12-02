@@ -223,11 +223,11 @@
         },
 
         "location": {
-            "google_maps_url": null,
-            "ritmaps_mdo_id": null,
+            "google_maps_url": "https://maps.app.goo.gl/ZWCbujsLdzRRWKit7",
+            "ritmaps_mdo_id": 126,
             "coordinates": [
-                null,
-                null
+                43.0838515,
+                -77.6772063
             ]
         },
 
