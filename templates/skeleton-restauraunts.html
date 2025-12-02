@@ -99,11 +99,11 @@
                             <td>
                                 {% set v = item.hours.get(day) %}
                                 {% if v is iterable and v is not string %}
-                                    {% for part in v %}
-                                        <div>{{ part }}</div>
-                                    {% endfor %}
+                                {% for part in v %}
+                                <div>{{ part }}</div>
+                                {% endfor %}
                                 {% else %}
-                                    {{ v or 'Closed' }}
+                                {{ v or 'Closed' }}
                                 {% endif %}
                             </td>
                         </tr>
@@ -125,25 +125,54 @@
                 {% if item.address %}
                 <p><strong>Address:</strong> {{ item.address }}</p>
                 {% endif %}
+                {% if item.location %}
+                <h4 class="mt-3">Location</h4>
+                {% set coords = item.location.coordinates %}
+                {% set has_coords = coords and (coords|length > 1) and (coords[0] is not none) and (coords[1] is not
+                none) %}
+                {% if has_coords %}
+                <p><strong>Coordinates:</strong> {{ coords[0] }}, {{ coords[1] }}</p>
+                {% endif %}
+                    {% set maps_link = item.location.google_maps_url or (('https://www.google.com/maps/search/?api=1&query=' ~ coords[0] ~ ',' ~ coords[1]) if has_coords else none) %}
+                    {% if maps_link %}
+                    <p>
+                        <a href="{{ maps_link }}" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
+                        {% if has_coords %}
+                            &nbsp;|&nbsp;
+                            <a href="https://www.google.com/maps/dir/?api=1&destination={{ coords[0] }},{{ coords[1] }}" target="_blank" rel="noopener noreferrer">Directions</a>
+                        {% endif %}
+                    </p>
+                    {% endif %}
+                    {% if has_coords %}
+                    <div class="ratio ratio-16x9 mt-2">
+                        <iframe
+                            src="https://www.google.com/maps?q={{ coords[0] }},{{ coords[1] }}&z=16&output=embed"
+                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Map for {{ item.name }}">
+                        </iframe>
+                    </div>
+                    {% endif %}
+                {% endif %}
             </div>
             <div class="col-md-4">
                 <h4>Meta</h4>
                 {% if item.tags and item.tags|length > 0 %}
                 <p><strong>Tags:</strong>
                     {% for t in item.tags %}
-                        <span class="badge bg-secondary">{{ t }}</span>
+                    <span class="badge bg-secondary">{{ t }}</span>
                     {% endfor %}
                 </p>
                 {% endif %}
                 {% if item.payment_methods %}
                 <p><strong>Payment:</strong>
                     {% for method, ok in item.payment_methods.items() %}
-                        {% set pretty = method|replace('_', ' ')|title|replace('Rit', 'RIT') %}
-                        {% if ok %}
-                            <span class="badge bg-success text-white">{{ pretty }}</span>
-                        {% else %}
-                            <span class="badge bg-danger text-white">{{ pretty }}</span>
-                        {% endif %}
+                    {% set pretty = method|replace('_', ' ')|title|replace('Rit', 'RIT') %}
+                    {% if ok %}
+                    <span class="badge bg-success text-white">{{ pretty }}</span>
+                    {% else %}
+                    <span class="badge bg-danger text-white">{{ pretty }}</span>
+                    {% endif %}
                     {% endfor %}
                 </p>
                 {% endif %}
