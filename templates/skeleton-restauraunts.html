@@ -146,7 +146,7 @@
                     {% if has_coords %}
                     <div class="ratio ratio-16x9 mt-2">
                         <iframe
-                            src="https://www.google.com/maps?q={{ coords[0] }},{{ coords[1] }}&z=16&output=embed"
+                           src="https://www.google.com/maps/place/{{ item.name }}/{{ coords[0] }},{{ coords[1] }},815m?output=embed""
                             width="100%" height="100%" style="border:0;" allowfullscreen=""
                             loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                             title="Map for {{ item.name }}">
